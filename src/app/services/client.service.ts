@@ -10,16 +10,16 @@ import { Client } from '../model/client';
 
 export class ClientService {
 
-     endpoint = 'http://localhost:3000';
-   // endpoint = 'http://localhost:8080/myapp';
+    //  endpoint = 'http://localhost:3000';
+   endpoint = 'http://localhost:8080';
 
     constructor(private http: HttpClient) { }
 
      httpOptions = {
-      /*  headers: new HttpHeaders({
+       headers: new HttpHeaders({
              'Content-Type': 'application/json',
             'Access-Control-Allow-Origin' : '*'
-        })*/
+        })
     }
 
 

@@ -2,8 +2,8 @@
   "clients": [
     {
       "id": 0,
-      "nom": "zbuef",
-      "prenom": "ubzef",
+      "lastName": "zbuef",
+      "firstName": "ubzef",
       "login": "bzd",
       "motDePasse": "",
       "adresse": {
@@ -14,8 +14,8 @@
     },
     {
       "id": 0,
-      "nom": "c ",
-      "prenom": "c ",
+      "lastName": "c ",
+      "firstName": "c ",
       "login": "cb ",
       "motDePasse": "",
       "adresse": {
@@ -26,8 +26,8 @@
     },
     {
       "id": 0,
-      "nom": "etg",
-      "prenom": "dtbf",
+      "lastName": "etg",
+      "firstName": "dtbf",
       "login": "bfxdfsb",
       "motDePasse": "",
       "adresse": {
@@ -38,8 +38,8 @@
     },
     {
       "id": 0,
-      "nom": "rgsvf",
-      "prenom": "rfvc",
+      "lastName": "rgsvf",
+      "firstName": "rfvc",
       "login": "gdfb",
       "motDePasse": "",
       "adresse": {
