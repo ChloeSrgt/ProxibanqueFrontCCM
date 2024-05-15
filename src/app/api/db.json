@@ -1,0 +1,52 @@
+{
+  "clients": [
+    {
+      "id": 0,
+      "nom": "zbuef",
+      "prenom": "ubzef",
+      "login": "bzd",
+      "motDePasse": "",
+      "adresse": {
+        "numero": "uzhd",
+        "rue": "zudb",
+        "ville": "bjdv"
+      }
+    },
+    {
+      "id": 0,
+      "nom": "c ",
+      "prenom": "c ",
+      "login": "cb ",
+      "motDePasse": "",
+      "adresse": {
+        "numero": "vb ",
+        "rue": "vn ",
+        "ville": "nn,"
+      }
+    },
+    {
+      "id": 0,
+      "nom": "etg",
+      "prenom": "dtbf",
+      "login": "bfxdfsb",
+      "motDePasse": "",
+      "adresse": {
+        "numero": "bdfx ",
+        "rue": "dbf ",
+        "ville": "bf"
+      }
+    },
+    {
+      "id": 0,
+      "nom": "rgsvf",
+      "prenom": "rfvc",
+      "login": "gdfb",
+      "motDePasse": "",
+      "adresse": {
+        "numero": "dtbfx",
+        "rue": "gbv",
+        "ville": "gbv "
+      }
+    }
+  ]
+}

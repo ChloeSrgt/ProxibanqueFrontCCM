@@ -1,16 +1,16 @@
-import { Component, OnInit } from '@angular/core';
-import { ClientService } from '../../services/client.service';
+/* import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Client } from '../../model/client';
-import { Adresse } from '../../model/adresse';
+import { ClientService } from '../servicesYann/client.service';
+import { Client } from '../model/client';
+import { Adresse } from '../model/adresse';
 
 @Component({
-  selector: 'app-client-edit',
-  standalone: false,
+  selector: 'app-client-details',
   templateUrl: './client-edit.component.html',
-  styleUrl: './client-edit.component.css'
+  styleUrls: ['./client-edit.component.css']
 })
-export class ClientEditComponent implements OnInit{
+
+export class ClientEditComponent implements OnInit {
   id = this.activatedRoute.snapshot.params['id'];
   clientDetails: any = {};
 
@@ -33,4 +33,4 @@ export class ClientEditComponent implements OnInit{
     }
   }
 
-}
+} */

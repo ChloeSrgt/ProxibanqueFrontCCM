@@ -1,11 +1,10 @@
-import { Component, OnInit } from '@angular/core';
-import { ClientService } from '../../services/client.service';
+/* import { Component, OnInit } from '@angular/core';
+import { ClientService } from '../servicesYann/client.service';
 
 @Component({
   selector: 'app-client-list',
-  standalone: false,
   templateUrl: './client-list.component.html',
-  styleUrl: './client-list.component.css'
+  styleUrls: ['./client-list.component.css']
 })
 export class ClientListComponent implements OnInit {
 
@@ -35,3 +34,4 @@ export class ClientListComponent implements OnInit {
   }
 
 }
+ */
