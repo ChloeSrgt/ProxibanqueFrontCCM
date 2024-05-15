@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login and News Page</title>
+</head>
+<body>
+    <div class="container">
+        <div class="login-section">
+            <h1>Login</h1>
+            <p>Stay vigilant and ensure to protect your personal data.</p>
+            <!-- <div class="image-section"></div> -->
+            <form (ngSubmit)="onLogin()">
+                <div class="input-group">
+                    <label class="test" for="username">Username:</label>
+                    <input type="text" id="username" [(ngModel)]="username" name="username" required>
+                </div>
+                <div class="input-group">
+                    <label class="test" for="password">Password:</label>
+                    <input type="password" id="password" [(ngModel)]="password" name="password" required>
+                </div>
+                <button class="login-button" type="submit">Login</button>
+            </form>
+        </div>
+        <div class="separator"></div>
+        <h2>Last news</h2>
+        <div class="news-section">
+            <div class="news-card">
+                <div class="news-image"></div>
+                <h3>Our actions within the territory</h3>
+                <p>Construction of three shelters in Lyon in partnership with the association Handi Espoirs...</p>
+                <button>Voir</button>
+            </div>
+            <div class="news-card">
+                <div class="news-image"></div>
+                <h3>They are apprentices at ProxiBanque</h3>
+                <p>What if your next apprenticeship or internship was with us? Meet Adam, Gwendal and Marine...</p>
+                <button>Voir</button>
+            </div>
+            <div class="news-card">
+                <div class="news-image"></div>
+                <h3>Inauguration of our new agency in Nantes</h3>
+                <p>Last May, ProxiBanque opened its doors in the city center of Nantes. Headed by Morgan...</p>
+                <button>Voir</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
