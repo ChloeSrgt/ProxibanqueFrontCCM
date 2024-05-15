@@ -1,14 +1,13 @@
-import { Component, OnInit } from '@angular/core';
-import { ClientService } from '../../services/client.service';
-import { ActivatedRoute, Router } from '@angular/router';
+/* import { Component, OnInit } from '@angular/core';
+import { Router, ActivatedRoute } from '@angular/router';
+import { ClientService } from '../servicesYann/client.service';
 
 @Component({
-  selector: 'app-client-details',
-  standalone: false,
-  templateUrl: './client-details.component.html',
-  styleUrl: './client-details.component.css'
+    selector: 'app-client-show',
+    templateUrl: './client-show.component.html',
+    styleUrls: ['./client-show.component.css']
 })
-export class ClientDetailsComponent implements OnInit{
+export class ClientShowComponent implements OnInit {
 
     id = this.activatedRoute.snapshot.params['id'];
     clientDetails: any = {};
@@ -29,3 +28,4 @@ export class ClientDetailsComponent implements OnInit{
 
 
 }
+ */

@@ -5,6 +5,7 @@ import { ClientDetailsComponent } from './pages/client-details/client-details.co
 import { ClientEditComponent } from './pages/client-edit/client-edit.component';
 import { ClientListComponent } from './pages/client-list/client-list.component';
 import { StatisticsComponent } from './pages/statistics/statistics.component';
+import { ClientCreateComponent } from './pages/client-create/client-create.component';
 
 import { LoginComponent } from './pages/login/login.component';  
 
@@ -15,6 +16,7 @@ export const routes: Routes = [
   { path: 'statistics', component: StatisticsComponent },
   { path: 'advisors-list', component: AdvisorsListComponent },
   { path: 'client-edit', component: ClientEditComponent },
+  {path: 'client-create', component:ClientCreateComponent},
   { path: '', redirectTo: '/login', pathMatch: 'full' },  
   { path: '**', redirectTo: '/login' }  
 ];
@@ -26,4 +28,3 @@ export const routes: Routes = [
   })
 
   export class AppRoutesModule { }
-  
