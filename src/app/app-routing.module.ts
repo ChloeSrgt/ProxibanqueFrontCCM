@@ -7,18 +7,20 @@ import { ClientListComponent } from './pages/client-list/client-list.component';
 import { StatisticsComponent } from './pages/statistics/statistics.component';
 import { ClientCreateComponent } from './pages/client-create/client-create.component';
 
-import { LoginComponent } from './pages/login/login.component';  
+import { LoginComponent } from './pages/login/login.component';
+import { ClientAccountComponent } from './pages/client-account/client-account.component';
 
 export const routes: Routes = [
-  { path: 'login', component: LoginComponent }, 
+  { path: 'login', component: LoginComponent },
   { path: 'client-list', component: ClientListComponent },
   { path: 'client-details', component: ClientDetailsComponent },
   { path: 'statistics', component: StatisticsComponent },
   { path: 'advisors-list', component: AdvisorsListComponent },
   { path: 'client-edit', component: ClientEditComponent },
   {path: 'client-create', component:ClientCreateComponent},
-  { path: '', redirectTo: '/login', pathMatch: 'full' },  
-  { path: '**', redirectTo: '/login' }  
+  { path: 'client-account', component:ClientAccountComponent },
+  { path: '', redirectTo: '/login', pathMatch: 'full' },
+  { path: '**', redirectTo: '/login' }
 ];
 
 
