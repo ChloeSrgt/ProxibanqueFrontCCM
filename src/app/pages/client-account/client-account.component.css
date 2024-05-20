@@ -1,7 +1,61 @@
+* {
+  font-family: 'circular';
+}
+
 h1, h2 {
   color: #413993;
+  padding: 0%;
+  margin: 0%;
+}
+
+h1 {
+  padding-bottom: 75px;
+  font-size: 36px;
+}
+
+.container {
+  margin-block: 75px;
+}
+
+.center-content {
+  justify-content: center;
 }
 
 .text-center {
   text-align: center;
+}
+
+.display-flex {
+  display: flex;
+}
+
+.tables {
+  gap: 20px;
+  text-align: justify;
+}
+
+.border-table {
+  border: 1.5px solid #EDF0F6;
+  border-radius: 30px;
+  padding: 20px;
+  margin-bottom: 50px;
+}
+
+.card-table {
+  min-width: 320px;
+}
+
+.accounts-table {
+  min-width: 546px;
+}
+
+button {
+  width: 8%;
+  padding: 10px;
+  background-color: #413993;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 16px;
 }

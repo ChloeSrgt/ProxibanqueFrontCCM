@@ -1,16 +1,21 @@
-<div class="text-center">
-  <p>Client name</p>
+<div class="container text-center">
+  <p>{{ client.lastName | uppercase }} {{ client.firstName }}</p>
   <h1>Client account</h1>
 
-  <div>
-    <div>
+  <div class="display-flex center-content tables">
+    <div class="border-table card-table">
       <h2>Card</h2>
         <h3>Name of the card</h3>
     </div>
 
-    <div>
-      <h2>Client name</h2>
+    <div class="border-table accounts-table">
+      <h2>{{ client.lastName | uppercase }} {{ client.firstName }}</h2>
+        <div *ngFor="let account of client.listAccount">
+          <h3>{{ account.currentAccount }}</h3>
+          <h3>{{ account.savingAccount }}</h3>
+        </div>
     </div>
+
   </div>
 
   <button class="btn btn-primary">Bank transfer</button>
