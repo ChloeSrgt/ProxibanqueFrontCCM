@@ -11,15 +11,9 @@ export class ClientAccountComponent {
     firstName: 'Bakary',
     lastName: 'Sagnat',
     listAccount: [
-      { currentAccount: 'Current account' },
-      { savingAccount: 'Saving account' },
-      { testAccount: [
-        { numAccount: '12345' },
-        { solde: 3000 },
-        { openDate: '20/20/2023' }
-      ]
-    }
-    ]
+      { type: 'Current account', numAccount: '12345', solde: 3000 },
+      { type: 'Saving account', numAccount: '67890', solde: 10000 }
+    ],
   };
 
 }

@@ -1,5 +1,5 @@
 <div class="container text-center">
-  <p>{{ client.lastName | uppercase }} {{ client.firstName }}</p>
+  <p class="client-name">{{ client.lastName | uppercase }} {{ client.firstName }}</p>
   <h1>Client account</h1>
 
   <div class="display-flex center-content tables">
@@ -10,10 +10,25 @@
 
     <div class="border-table accounts-table">
       <h2>{{ client.lastName | uppercase }} {{ client.firstName }}</h2>
-        <div *ngFor="let account of client.listAccount">
-          <h3>{{ account.currentAccount }}</h3>
-          <h3>{{ account.savingAccount }}</h3>
+
+      <div *ngFor="let account of client.listAccount">
+
+        <div class="account">
+          <div>
+            <h3>{{ account.type }}</h3>
+            <p>{{ account.numAccount }}</p>
+          </div>
+
+          <p>{{ account.solde | currency: 'EUR' }}</p>
         </div>
+
+      </div>
+
+      <div class="total-soldes">
+        <h3 >TOTAL</h3>
+          <p>total des soldes</p>
+      </div>
+
     </div>
 
   </div>

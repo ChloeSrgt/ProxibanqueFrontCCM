@@ -2,7 +2,7 @@
   font-family: 'circular';
 }
 
-h1, h2 {
+h1, h2, h3 {
   color: #413993;
   padding: 0%;
   margin: 0%;
@@ -29,6 +29,11 @@ h1 {
   display: flex;
 }
 
+.client-name {
+  font-size: 20px;
+  color: #959AA6;
+}
+
 .tables {
   gap: 20px;
   text-align: justify;
@@ -47,7 +52,29 @@ h1 {
 
 .accounts-table {
   min-width: 546px;
+
+  h2 {
+    font-size: 16px;
+    color: #959AA6;
+  }
+
+  h3 {
+    text-decoration: underline;
+  }
 }
+
+.account {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.total-soldes {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 
 button {
   width: 8%;
