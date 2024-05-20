@@ -9,6 +9,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { ClientCreateComponent } from './pages/client-create/client-create.component';
 import { ClientDetailsComponent } from './pages/client-details/client-details.component';
 import { ClientEditComponent } from './pages/client-edit/client-edit.component';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { MaterialModule } from './material.module';
 
 @NgModule({
   declarations: [
@@ -23,9 +25,12 @@ import { ClientEditComponent } from './pages/client-edit/client-edit.component';
     BrowserModule,
     FormsModule,
     AppRoutesModule,
-    HttpClientModule
+    HttpClientModule,
+    MaterialModule
   ],
-  providers: [],
+  providers: [
+    provideAnimationsAsync()
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
