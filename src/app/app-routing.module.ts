@@ -8,7 +8,9 @@ import { StatisticsComponent } from './pages/statistics/statistics.component';
 import { ClientCreateComponent } from './pages/client-create/client-create.component';
 
 import { LoginComponent } from './pages/login/login.component';
+
 import { ClientAccountComponent } from './pages/client-account/client-account.component';
+
 
 export const routes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -26,7 +28,10 @@ export const routes: Routes = [
 
   @NgModule({
     imports: [RouterModule.forRoot(routes)],
-    exports: [RouterModule]
+    exports: [RouterModule],
+    declarations: [
+  
+    ]
   })
 
   export class AppRoutesModule { }
