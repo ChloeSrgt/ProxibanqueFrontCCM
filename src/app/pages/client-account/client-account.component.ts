@@ -8,8 +8,8 @@ import { Component } from '@angular/core';
 export class ClientAccountComponent {
 
   client = {
-    firstName: 'Bakary',
-    lastName: 'Sagnat',
+    firstName: 'Bacary',
+    lastName: 'Sagna',
     listAccount: [
       { type: 'Current account', numAccount: '12345', solde: 3000 },
       { type: 'Saving account', numAccount: '67890', solde: 10000 }
