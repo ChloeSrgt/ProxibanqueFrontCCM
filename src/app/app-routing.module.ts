@@ -7,7 +7,8 @@ import { ClientListComponent } from './pages/client-list/client-list.component';
 import { StatisticsComponent } from './pages/statistics/statistics.component';
 import { ClientCreateComponent } from './pages/client-create/client-create.component';
 
-import { LoginComponent } from './pages/login/login.component';  
+import { LoginComponent } from './pages/login/login.component';
+//import { HeaderComponent } from './header/header.component';  
 
 export const routes: Routes = [
   { path: 'login', component: LoginComponent }, 
@@ -24,7 +25,10 @@ export const routes: Routes = [
 
   @NgModule({
     imports: [RouterModule.forRoot(routes)],
-    exports: [RouterModule]
+    exports: [RouterModule],
+    declarations: [
+  
+    ]
   })
 
   export class AppRoutesModule { }

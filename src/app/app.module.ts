@@ -11,6 +11,7 @@ import { ClientDetailsComponent } from './pages/client-details/client-details.co
 import { ClientEditComponent } from './pages/client-edit/client-edit.component';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { MaterialModule } from './material.module';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { MaterialModule } from './material.module';
     ClientListComponent,/* -> Declare ClientListComponent */
     ClientCreateComponent,
     ClientDetailsComponent,
-    ClientEditComponent
+    ClientEditComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,

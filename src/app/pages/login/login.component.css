@@ -9,23 +9,6 @@ body, html {
     min-height: 100vh;
 }
 
-.mat-toolbar.mat-primary {
-    background: #413993;
-    color: black;
-}
-.mat-toolbar h1{
-    color: black;
-}
-
-.mat-toolbar h1:hover{
-    
-    text-decoration:underline;
-    color: wheat;
-}
-
-.space-toolbar{
-    margin-left: 10px;
-}
 
 
 .container {
