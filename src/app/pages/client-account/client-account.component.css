@@ -1,0 +1,88 @@
+* {
+  font-family: 'circular';
+}
+
+h1, h2, h3 {
+  color: #413993;
+  padding: 0%;
+  margin: 0%;
+}
+
+h1 {
+  padding-bottom: 75px;
+  font-size: 36px;
+}
+
+.container {
+  margin-block: 75px;
+}
+
+.center-content {
+  justify-content: center;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.display-flex {
+  display: flex;
+}
+
+.client-name {
+  font-size: 20px;
+  color: #959AA6;
+}
+
+.tables {
+  gap: 20px;
+  text-align: justify;
+}
+
+.border-table {
+  border: 1.5px solid #EDF0F6;
+  border-radius: 30px;
+  padding: 20px;
+  margin-bottom: 50px;
+}
+
+.card-table {
+  min-width: 320px;
+}
+
+.accounts-table {
+  min-width: 546px;
+
+  h2 {
+    font-size: 16px;
+    color: #959AA6;
+  }
+
+  h3 {
+    text-decoration: underline;
+  }
+}
+
+.account {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.total-soldes {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+button {
+  width: 8%;
+  padding: 10px;
+  background-color: #413993;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 16px;
+}
