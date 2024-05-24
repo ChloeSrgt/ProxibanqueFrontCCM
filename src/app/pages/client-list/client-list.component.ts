@@ -5,36 +5,41 @@ import { Router } from '@angular/router';
 import { Address } from '../../model/address';
 
 @Component({
-    selector: 'app-client-list',
-    templateUrl: './client-list.component.html',
-    styleUrls: ['./client-list.component.css']
+  selector: 'app-client-list',
+  templateUrl: './client-list.component.html',
+  styleUrls: ['./client-list.component.css']
 })
 export class ClientListComponent implements OnInit {
-    displayedColumns: string[] = ['id', 'lastName', 'firstName', 'city', 'noTel', 'actions'];
-    dataSource: Client[] = [];
+  displayedColumns: string[] = ['id', 'lastName', 'firstName', 'city', 'noTel', 'account', 'edit'];
+  dataSource: Client[] = [];
 
-    constructor(private clientService: ClientService, private router: Router) {}
+  constructor(private clientService: ClientService, private router: Router) {}
 
-    ngOnInit(): void {
-        this.clientService.getClients().subscribe((data: Client[]) => {
-            this.dataSource = data.map(client => {
-                if (!client.address) {
-                    client.address = new Address();
-                }
-                return client;
-            });
-        });
-    }
+  ngOnInit(): void {
+    this.clientService.getClients().subscribe((data: Client[]) => {
+      this.dataSource = data.map(client => {
+        if (!client.address) {
+          client.address = new Address();
+        }
+        if (!client.noTel) {
+          client.noTel = 'N/A'; 
+        }
+        return client;
+      });
+    });
+  }
 
-    showClient(id: number) {
-    }
+  showClient(id: number) {
+    // Logique pour afficher les détails du client
+  }
 
-    editClient(id: number) {
-    }
+  editClient(id: number) {
+    // Logique pour éditer le client
+  }
 
-    deleteClient(id: number) {
-        this.clientService.deleteClient(id).subscribe(() => {
-            this.dataSource = this.dataSource.filter(client => client.id !== id);
-        });
-    }
+  deleteClient(id: number) {
+    this.clientService.deleteClient(id).subscribe(() => {
+      this.dataSource = this.dataSource.filter(client => client.id !== id);
+    });
+  }
 }

@@ -8,14 +8,16 @@
 </head>
 <body>
     <nav>
+        <a [routerLink]="['/login']" class="title">ProxiBanque</a>
 
-        <a [routerLink]="['/login']" class="title"> <i class="fa-solid fa-house"></i>    ProxiBanque</a>
-        <a [routerLink]="['/advisors-list']"> Advisors list</a>
-        <a [routerLink]="['/statistics']"> Statistics</a>
-        <a [routerLink]="['client-list']"> Client List</a>
+        <ng-container *ngIf="role$ | async as role">
+            <a *ngIf="role === 'manager'" [routerLink]="['/statistics']">Statistics</a>
+            <a *ngIf="role === 'manager'" [routerLink]="['/advisors-list']">Advisors List</a>
+            <a *ngIf="role === 'advisor'" [routerLink]="['/client-create']">Add Client</a>
+            <a *ngIf="role === 'advisor'" [routerLink]="['/client-list']">Client List</a>
+        </ng-container>
+
         <span>Site de Nantes</span>
-
-
     </nav>
 </body>
 </html>
