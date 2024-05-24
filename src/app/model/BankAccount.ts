@@ -3,5 +3,5 @@ export class BankAccount {
     solde: number = 0;
     openDate: string = '';
     card: string = '';
-    accountType: string = '';
+    accountType: string = ''; 
 }
