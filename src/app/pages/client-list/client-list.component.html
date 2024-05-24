@@ -1,42 +1,55 @@
-<div class="container custom-container-2">
+<div class="client-list-container">
+  <h2>Client List</h2>
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
 
-  
-    <div class="no-data text-center" *ngIf="client.length == 0">
-    <p>There is no client added yet!</p>
-    <button class="btn btn-outline-primary" routerLink="/create-client">Add client</button>
-  </div>
+      <!-- Id Column -->
+      <ng-container matColumnDef="id">
+          <th mat-header-cell *matHeaderCellDef> Id </th>
+          <td mat-cell *matCellDef="let client"> {{client.id}} </td>
+      </ng-container>
 
-  <div *ngIf="client.length !== 0">
-    <h3 class="mb-3 text-center">Clients List</h3>
+      <!-- Last Name Column -->
+      <ng-container matColumnDef="lastName">
+          <th mat-header-cell *matHeaderCellDef> Last name </th>
+          <td mat-cell *matCellDef="let client"> {{client.lastName}} </td>
+      </ng-container>
 
-    <div class="col-md-12">
-      <table class="table table-bordered">
-        <thead>
-          <tr>
-            <th scope="col"> Id</th>
-            <th scope="col">lastName</th>
-            <th scope="col">firstName</th>
-            <th scope="col">Login</th>
-            <th scope="col">Action</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr *ngFor="let c of client">
-            <td>{{c.id}}</td>
-            <td>{{c.lastName}}</td>
-            <td>{{c.firstName}}</td>
-            <td>{{c.login}}</td>
-            <td >
-                
-              <button class="btn btn-info mr-1" routerLink="/client-show/{{c.id}}">Show</button>
-              <button class="btn btn-warning mr-1" routerLink="/client-edit/{{c.id}}">Edit</button>
-              <button class="btn btn-danger" (click)="deleteClient(c.id)">Delete</button>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+      <!-- First Name Column -->
+      <ng-container matColumnDef="firstName">
+          <th mat-header-cell *matHeaderCellDef> First name </th>
+          <td mat-cell *matCellDef="let client"> {{client.firstName}} </td>
+      </ng-container>
 
-  </div>
+      <!-- City Column -->
+      <ng-container matColumnDef="city">
+          <th mat-header-cell *matHeaderCellDef> City </th>
+          <td mat-cell *matCellDef="let client"> {{client.address.city}} </td>
+      </ng-container>
 
+      <!-- Phone Column -->
+      <ng-container matColumnDef="noTel">
+          <th mat-header-cell *matHeaderCellDef> Phone </th>
+          <td mat-cell *matCellDef="let client"> {{client.noTel}} </td>
+      </ng-container>
+
+      <!-- Actions Column -->
+      <ng-container matColumnDef="actions">
+          <th mat-header-cell *matHeaderCellDef> Actions </th>
+          <td mat-cell *matCellDef="let client">
+              <button mat-icon-button color="primary" (click)="showClient(client.id)">
+                  <i class="fas fa-credit-card"></i>
+              </button>
+              <button mat-icon-button color="accent" (click)="editClient(client.id)">
+                  <i class="fas fa-gear"></i>
+              </button>
+              <button mat-icon-button color="warn" (click)="deleteClient(client.id)">
+                  <i class="fas fa-trash"></i>
+              </button>
+          </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+  <button mat-raised-button color="primary" routerLink="/client-create">Add Client</button>
 </div>

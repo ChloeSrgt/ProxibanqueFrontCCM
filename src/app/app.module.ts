@@ -5,29 +5,35 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './pages/login/login.component';
 import { ClientListComponent } from './pages/client-list/client-list.component';  
 import { AppRoutesModule } from './app-routing.module';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatTableModule } from '@angular/material/table';
+import { MatButtonModule } from '@angular/material/button';
 import { HttpClientModule } from '@angular/common/http';
 import { ClientCreateComponent } from './pages/client-create/client-create.component';
 import { ClientDetailsComponent } from './pages/client-details/client-details.component';
 import { ClientEditComponent } from './pages/client-edit/client-edit.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';  
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    ClientListComponent,/* -> Declare ClientListComponent */
+    ClientListComponent,
     ClientCreateComponent,
     ClientDetailsComponent,
     ClientEditComponent
   ],
   imports: [
     BrowserModule,
+    MatSnackBarModule,
     FormsModule,
     AppRoutesModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,  
+    MatTableModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
-
-

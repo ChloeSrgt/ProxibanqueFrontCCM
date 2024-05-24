@@ -1,35 +1,31 @@
-<div class="container custom-container">
-    <div class="col-md-12">
-        <form #mainForm="ngForm">
-            <h3 class="mb-3 text-center">Create Client</h3>
-
-            <div class="form-group">
-                <input type="text" [(ngModel)]="clientDetails.lastName" name="lastName"  class="form-control" placeholder="lastName">
-
-
-
-                <input type="text" [(ngModel)]="clientDetails.firstName" name="firstName"  class="form-control" placeholder="firstName">
-
-
-
-                <input type="text" [(ngModel)]="clientDetails.login" name="login"  class="form-control" placeholder="Login">
-
-  
-                    <input type="text" [(ngModel)]="clientDetails.adresse.numero" name="numero"  class="form-control"
-                        placeholder="numero">
-
-
-                    <input type="text" [(ngModel)]="clientDetails.adresse.rue" name="rue"  class="form-control" placeholder="rue">
-
-
-                    <input type="text" [(ngModel)]="clientDetails.adresse.ville" name="ville"  class="form-control"
-                        placeholder="ville">
-
-  
-
-
-                <button class="btn btn-success btn-lg btn-block" (click)="addClient()">Create Client</button>
-            </div>
-        </form>
-    </div>
+<div class="client-create-container">
+    <h2>Add a client</h2>
+    <form (ngSubmit)="onSubmit()">
+        <div>
+            <label for="firstName">First name:</label>
+            <input type="text" id="firstName" [(ngModel)]="client.firstName" name="firstName" required>
+        </div>
+        <div>
+            <label for="lastName">Last name:</label>
+            <input type="text" id="lastName" [(ngModel)]="client.lastName" name="lastName" required>
+        </div>
+        <div>
+            <label for="street">Address:</label>
+            <input type="text" id="street" [(ngModel)]="client.address.street" name="street" required>
+        </div>
+        <div>
+            <label for="postalCode">Postal code:</label>
+            <input type="text" id="postalCode" [(ngModel)]="client.address.postalCode" name="postalCode" required>
+        </div>
+        <div>
+            <label for="city">City:</label>
+            <input type="text" id="city" [(ngModel)]="client.address.city" name="city" required>
+        </div>
+        <div>
+            <label for="noTel">Phone:</label>
+            <input type="text" id="noTel" [(ngModel)]="client.noTel" name="noTel" required>
+        </div>
+        <button type="submit">Add client</button>
+    </form>
+    <a routerLink="/clients">Back to client list</a>
 </div>
