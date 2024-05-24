@@ -1,17 +1,24 @@
-.mat-toolbar.mat-primary {
+nav,nav a{
     background: #413993;
+    text-decoration: none;
     color: black;
-}
-.mat-toolbar h1{
-    color: black;
+    height: 45px;
+    padding-left: 10px;
+    padding-top: 8px;
 }
 
-.mat-toolbar h1:hover{
-    
-        text-decoration:underline;
-    color: wheat;
+nav a:hover{
+    color: beige;
 }
 
-.space-toolbar{
-    margin-left: 10px;
+.title{
+font-size: 160%;
+font-weight: bold;
+padding-right: 40px;
+}
+
+nav span{
+    position: fixed;
+    right: 20px;
+    padding-top: 5px;
 }
