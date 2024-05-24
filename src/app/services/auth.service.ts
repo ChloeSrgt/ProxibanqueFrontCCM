@@ -7,8 +7,9 @@ export class AuthService {
 /*   private validCredentials = {
     username: 'admin',
     password: 'admin123'
-  }; */
+
   private roles:string[] = [];
+
 
   constructor() {
     this.roles = this.getRolesFromServer();
@@ -21,7 +22,9 @@ hasRole(role:string) : boolean{
   return this.roles.includes(role);
 }
 
+
  /*  login(username: string, password: string): boolean {
+
     return username === this.validCredentials.username && password === this.validCredentials.password;
   } */
 
@@ -33,10 +36,10 @@ hasRole(role:string) : boolean{
       return 'advisor'
     }
   } return 'NotAllowed'
-    
+
+  
   }
     
 
   }
-
 

@@ -1,0 +1,15 @@
+.client-list-container {
+    margin: 20px;
+}
+
+table {
+    width: 100%;
+}
+
+.mat-column-actions {
+    width: 20%;
+}
+
+button {
+    margin-right: 5px;
+}

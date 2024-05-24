@@ -19,7 +19,7 @@ export class LoginComponent {
 
 /*   onLogin(): void {
     if (this.authService.login(this.username, this.password)) {
-      this.router.navigate(['/client-list']);  
+      this.router.navigate(['/client-list']);
     } else {
       alert('Invalid credentials!');
     }

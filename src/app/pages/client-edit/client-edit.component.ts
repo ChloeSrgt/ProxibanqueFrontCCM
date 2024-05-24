@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ClientService } from '../../services/client.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Client } from '../../model/client';
-import { Adresse } from '../../model/adresse';
+import { Address } from '../../model/address';
 
 @Component({
   selector: 'app-client-edit',
@@ -16,7 +16,7 @@ export class ClientEditComponent implements OnInit{
 
   constructor( private service: ClientService, private activatedRoute: ActivatedRoute, private router: Router) {
       this.clientDetails = new Client();
-      this.clientDetails.adresse = new Adresse();
+      this.clientDetails.address = new Address();
   }
 
   ngOnInit() {

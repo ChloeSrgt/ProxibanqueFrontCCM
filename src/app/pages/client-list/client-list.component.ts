@@ -1,37 +1,42 @@
 import { Component, OnInit } from '@angular/core';
 import { ClientService } from '../../services/client.service';
+import { Client } from '../../model/client';
+import { Router } from '@angular/router';
+import { Address } from '../../model/address';
 
 @Component({
-  selector: 'app-client-list',
-  standalone: false,
-  templateUrl: './client-list.component.html',
-  styleUrl: './client-list.component.css'
+    selector: 'app-client-list',
+    templateUrl: './client-list.component.html',
+    styleUrls: ['./client-list.component.css']
 })
 export class ClientListComponent implements OnInit {
+    displayedColumns: string[] = ['id', 'lastName', 'firstName', 'city', 'noTel', 'actions'];
+    dataSource: Client[] = [];
 
-  client: any = [];
+    constructor(private clientService: ClientService, private router: Router) {}
 
-  constructor(
-    public service: ClientService
-  ) { }
-
-  ngOnInit() {
-    this.loadClients()
-  }
-
-
-  loadClients() {
-    return this.service.getClients().subscribe((data: {}) => { console.log(data);
-      this.client = data;
-    })
-  }
-
-  deleteClient(id:number) {
-    if (window.confirm('Are you sure, you want to delete?')){
-      this.service.deleteClient(id).subscribe(data => {
-        this.loadClients()
-      })
+    ngOnInit(): void {
+        this.clientService.getClients().subscribe((data: Client[]) => {
+            this.dataSource = data.map(client => {
+                if (!client.address) {
+                    client.address = new Address();
+                }
+                return client;
+            });
+        });
     }
-  }
 
+    showClient(id: number) {
+        // Implémenter la logique pour afficher le client
+    }
+
+    editClient(id: number) {
+        // Implémenter la logique pour éditer le client
+    }
+
+    deleteClient(id: number) {
+        this.clientService.deleteClient(id).subscribe(() => {
+            this.dataSource = this.dataSource.filter(client => client.id !== id);
+        });
+    }
 }
