@@ -38,18 +38,6 @@
     margin: 0 5px;
 }
 
-.action-button i.fa-credit-card {
-    color: #413993;
-}
-
-.action-button i.fa-gear {
-    color: #d3d3d3; /* Gris clair */
-}
-
-.action-button i.fa-trash {
-    color: #ff6b6b; /* Couleur rouge pour la corbeille */
-}
-
 .add-client-button {
     display: inline-block;
     margin-top: 20px;
