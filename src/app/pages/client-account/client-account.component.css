@@ -86,3 +86,14 @@ button {
   cursor: pointer;
   font-size: 16px;
 }
+
+.card {
+  background-color: #413993;
+  width: 200px;
+  min-height: 125px;
+  border-radius: 20px;
+  color: white;
+  padding: 15px;
+  margin-top: 20px;
+
+}
