@@ -20,7 +20,7 @@ export const routes: Routes = [
   { path: 'client-details', component: ClientDetailsComponent },
   { path: 'statistics', component: StatisticsComponent,canActivate:[managerGuard] },
   { path: 'advisors-list', component: AdvisorsListComponent,canActivate:[managerGuard] },
-  { path: 'client-edit', component: ClientEditComponent },
+  { path: 'client-edit/:id', component: ClientEditComponent },
   {path: 'client-create', component:ClientCreateComponent},
   { path: 'client-account', component:ClientAccountComponent },
   { path: '', redirectTo: '/login', pathMatch: 'full' },
