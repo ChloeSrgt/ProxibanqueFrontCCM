@@ -29,20 +29,20 @@
 }
 
 .proxi {
-    margin-left: 1%; 
+    margin-left: 1%;
 
     color: #4b4590;
 }
 
 .banque {
-    margin-left: 5%; 
+    margin-left: 5%;
     color: #4b4590
 }
 
 .links {
     display: flex;
     justify-content: center;
-    align-items: center; 
+    align-items: center;
 }
 
 .footer-link {

@@ -72,13 +72,13 @@ main {
   justify-content: center;
   margin-left: 25px;
 }
-footer {
+/* footer {
   background-color: #a29090;
   position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
-}
+} */
 
 .login-container {
   background: #fff;
