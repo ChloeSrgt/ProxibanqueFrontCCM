@@ -1,8 +1,21 @@
-<header>
-    <mat-toolbar color="primary">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="header.component.css">
+    <title>Document</title>
+</head>
+<body>
+    <nav>
 
-        <i class="fa-solid fa-house"></i>
-      <a mat-button routerLink="" class="space-toolbar"> <h1>Proxi Banque</h1></a>
-    
-    </mat-toolbar>
-</header>
+        <a [routerLink]="['/login']" class="title"> <i class="fa-solid fa-house"></i>    ProxiBanque</a>
+        <a [routerLink]="['/advisors-list']"> Advisors list</a>
+        <a [routerLink]="['/statistics']"> Statistics</a>
+        <a [routerLink]="['client-list']"> Client List</a>
+        <span>Site de Nantes</span>
+
+
+    </nav>
+</body>
+</html>

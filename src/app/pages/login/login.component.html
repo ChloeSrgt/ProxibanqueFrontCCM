@@ -9,22 +9,22 @@
 </head>
 
 <body>
-    
     <div class="container">
         <div class="login-section">
             <h1>Login</h1>
             <p>Stay vigilant and ensure to protect your personal data.</p>
             <!-- <div class="image-section"></div> -->
-            <form (ngSubmit)="onLogin()">
+            <!-- (ngSubmit)="onLogin()" -->
+            <form >
                 <div class="input-group">
                     <label class="test" for="username">Username:</label>
-                    <input type="text" id="username" [(ngModel)]="username" name="username" required>
+                    <input type="text" #username id="username" [(ngModel)]="username" placeholder="username" name="username" required>
                 </div>
                 <div class="input-group">
                     <label class="test" for="password">Password:</label>
-                    <input type="password" id="password" [(ngModel)]="password" name="password" required>
+                    <input #password type="password" id="password" [(ngModel)]="password" placeholder="password" name="password" required>
                 </div>
-                <button class="login-button" type="submit">Login</button>
+                <button class="login-button" type="submit" (click)="logMe(username,password)">Login</button>
             </form>
         </div>
         <div class="separator"></div>
