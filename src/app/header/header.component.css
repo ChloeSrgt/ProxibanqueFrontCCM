@@ -1,26 +1,26 @@
 nav,nav a{
-    background: #413993;
-    text-decoration: none;
-    color: black;
-    height: 50px;
-    padding-left: 10px;
-    padding-top: 8px;
-
+  text-decoration: none;
+  color: #413993;
+  height: 80px;
+  padding-inline: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #EDF0F6;
 }
 
 nav a:hover{
-    color: beige;
+  color: #332277;
 }
 
 .title{
-font-size: 160%;
-font-weight: bold;
-padding-right: 40px;
+  font-size: 160%;
+  font-weight: bold;
+  padding-right: 40px;
 }
 
 
 nav span{
-    position: fixed;
-    right: 20px;
-    padding-top: 5px;
+  right: 20px;
+  padding-top: 5px;
 }
