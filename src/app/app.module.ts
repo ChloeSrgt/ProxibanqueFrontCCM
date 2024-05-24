@@ -26,7 +26,9 @@ import { ClientAccountComponent } from './pages/client-account/client-account.co
     ClientCreateComponent,
     ClientDetailsComponent,
     ClientEditComponent,
-    FooterComponent
+    FooterComponent, 
+    ClientAccountComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,

@@ -10,14 +10,16 @@ import { ClientCreateComponent } from './pages/client-create/client-create.compo
 import { LoginComponent } from './pages/login/login.component';
 
 import { ClientAccountComponent } from './pages/client-account/client-account.component';
+import { advisorGuard } from './guard/advisor.guard';
+import { managerGuard } from './guard/manager.guard';
 
 
 export const routes: Routes = [
   { path: 'login', component: LoginComponent },
-  { path: 'client-list', component: ClientListComponent },
+  { path: 'client-list', component: ClientListComponent, canActivate:[advisorGuard]},
   { path: 'client-details', component: ClientDetailsComponent },
-  { path: 'statistics', component: StatisticsComponent },
-  { path: 'advisors-list', component: AdvisorsListComponent },
+  { path: 'statistics', component: StatisticsComponent,canActivate:[managerGuard] },
+  { path: 'advisors-list', component: AdvisorsListComponent,canActivate:[managerGuard] },
   { path: 'client-edit', component: ClientEditComponent },
   {path: 'client-create', component:ClientCreateComponent},
   { path: 'client-account', component:ClientAccountComponent },
