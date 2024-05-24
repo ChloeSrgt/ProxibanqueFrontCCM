@@ -9,6 +9,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ClientCreateComponent } from './pages/client-create/client-create.component';
 import { ClientDetailsComponent } from './pages/client-details/client-details.component';
 import { ClientEditComponent } from './pages/client-edit/client-edit.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { ClientEditComponent } from './pages/client-edit/client-edit.component';
     ClientListComponent,/* -> Declare ClientListComponent */
     ClientCreateComponent,
     ClientDetailsComponent,
-    ClientEditComponent
+    ClientEditComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
