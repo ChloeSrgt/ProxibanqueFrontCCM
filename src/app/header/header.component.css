@@ -5,6 +5,7 @@ nav,nav a{
     height: 50px;
     padding-left: 10px;
     padding-top: 8px;
+
 }
 
 nav a:hover{
@@ -16,6 +17,7 @@ font-size: 160%;
 font-weight: bold;
 padding-right: 40px;
 }
+
 
 nav span{
     position: fixed;
