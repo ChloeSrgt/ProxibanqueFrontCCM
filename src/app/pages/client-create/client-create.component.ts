@@ -25,7 +25,7 @@ export class ClientCreateComponent {
                 this.showNotification('Client created successfully!', 'success');
                 setTimeout(() => {
                     this.gotoClientList();
-                }, 6000); // Redirection après 2 secondes
+                }, 3000); // Redirection après 4 secondes
             },
             error => {
                 console.error('There was an error!', error);
@@ -44,6 +44,6 @@ export class ClientCreateComponent {
     }
 
     gotoClientList() {
-        this.router.navigate(['/clients']);
+        this.router.navigate(['/client-list']);
     }
 }
