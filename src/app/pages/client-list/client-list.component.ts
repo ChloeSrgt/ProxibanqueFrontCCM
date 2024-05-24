@@ -27,11 +27,9 @@ export class ClientListComponent implements OnInit {
     }
 
     showClient(id: number) {
-        // Implémenter la logique pour afficher le client
     }
 
     editClient(id: number) {
-        // Implémenter la logique pour éditer le client
     }
 
     deleteClient(id: number) {
