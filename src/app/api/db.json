@@ -1,52 +1,10 @@
 {
-  "clients": [
-    {
-      "id": 0,
-      "lastName": "zbuef",
-      "firstName": "ubzef",
-      "login": "bzd",
-      "motDePasse": "",
-      "adresse": {
-        "numero": "uzhd",
-        "rue": "zudb",
-        "ville": "bjdv"
-      }
-    },
-    {
-      "id": 0,
-      "lastName": "c ",
-      "firstName": "c ",
-      "login": "cb ",
-      "motDePasse": "",
-      "adresse": {
-        "numero": "vb ",
-        "rue": "vn ",
-        "ville": "nn,"
-      }
-    },
-    {
-      "id": 0,
-      "lastName": "etg",
-      "firstName": "dtbf",
-      "login": "bfxdfsb",
-      "motDePasse": "",
-      "adresse": {
-        "numero": "bdfx ",
-        "rue": "dbf ",
-        "ville": "bf"
-      }
-    },
-    {
-      "id": 0,
-      "lastName": "rgsvf",
-      "firstName": "rfvc",
-      "login": "gdfb",
-      "motDePasse": "",
-      "adresse": {
-        "numero": "dtbfx",
-        "rue": "gbv",
-        "ville": "gbv "
-      }
-    }
-  ]
+  "firstName": "Chloé",
+  "lastName": "Sirgent",
+  "address": {
+      "street": "9 boulevard de berlin",
+      "postalCode": "44000",
+      "city": "Nantes"
+  },
+  "noTel": "0637867498"
 }

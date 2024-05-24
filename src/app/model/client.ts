@@ -1,9 +1,11 @@
-import { Adresse } from './adresse';
+import { Address } from './address';
+import { BankAccount } from './BankAccount';
+
 export class Client {
-  id: number=0;
-  lastName: string='';
-  firstName: string='';
-  login: string='';
-  password: string='';
-  adresse: Adresse={numero:'', rue:'', ville:''};
+    id: number = 0;
+    firstName: string = '';
+    lastName: string = '';
+    address: Address = new Address();  
+    noTel: string = '';
+    listAccount: BankAccount[] = []; 
 }
