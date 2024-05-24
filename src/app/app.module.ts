@@ -1,17 +1,22 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms'; 
+import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './pages/login/login.component';
-import { ClientListComponent } from './pages/client-list/client-list.component';  
+import { ClientListComponent } from './pages/client-list/client-list.component';
 import { AppRoutesModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { ClientCreateComponent } from './pages/client-create/client-create.component';
 import { ClientDetailsComponent } from './pages/client-details/client-details.component';
 import { ClientEditComponent } from './pages/client-edit/client-edit.component';
+import { FooterComponent } from './footer/footer.component';
+
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { MaterialModule } from './material.module';
 import { HeaderComponent } from './header/header.component';
+
+import { ClientAccountComponent } from './pages/client-account/client-account.component';
+
 
 @NgModule({
   declarations: [
@@ -21,7 +26,7 @@ import { HeaderComponent } from './header/header.component';
     ClientCreateComponent,
     ClientDetailsComponent,
     ClientEditComponent,
-    HeaderComponent
+    FooterComponent
   ],
   imports: [
     BrowserModule,
@@ -36,5 +41,3 @@ import { HeaderComponent } from './header/header.component';
   bootstrap: [AppComponent]
 })
 export class AppModule { }
-
-
