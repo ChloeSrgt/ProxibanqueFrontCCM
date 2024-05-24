@@ -1,8 +1,6 @@
-nav,nav a{
-  text-decoration: none;
-  color: #413993;
+nav {
   height: 80px;
-  padding-inline: 20px;
+  padding-inline: 40px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -13,14 +11,26 @@ nav a:hover{
   color: #332277;
 }
 
-.title{
-  font-size: 160%;
-  font-weight: bold;
-  padding-right: 40px;
+.rightside-navbar {
+  display: flex;
+  align-items: baseline;
 }
 
+.rightside-navbar a {
+  text-decoration: none;
+  color: #413993;
+  padding-right: 30px;
+  font-weight: 500;
+}
+
+.title {
+  font-size: 160%;
+  font-weight: bold;
+  text-decoration: none;
+  color: #413993;
+}
 
 nav span{
   right: 20px;
-  padding-top: 5px;
+
 }
