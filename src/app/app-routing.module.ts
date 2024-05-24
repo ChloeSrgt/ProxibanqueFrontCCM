@@ -22,7 +22,7 @@ export const routes: Routes = [
   { path: 'advisors-list', component: AdvisorsListComponent,canActivate:[managerGuard] },
   { path: 'client-edit/:id', component: ClientEditComponent },
   {path: 'client-create', component:ClientCreateComponent},
-  { path: 'client-account', component:ClientAccountComponent },
+  { path: ':id/accounts', component:ClientAccountComponent },
   { path: '', redirectTo: '/login', pathMatch: 'full' },
   { path: '**', redirectTo: '/login' }
 ];
@@ -32,7 +32,7 @@ export const routes: Routes = [
     imports: [RouterModule.forRoot(routes)],
     exports: [RouterModule],
     declarations: [
-  
+
     ]
   })
 

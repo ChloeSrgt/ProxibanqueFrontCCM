@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ClientService } from '../../services/client.service';
 import { Client } from '../../model/client';
+import { InfoAccount } from '../../model/InfoAccount';
+import { CurrentAccount } from '../../model/currentAccount';
 
 @Component({
   selector: 'app-client-account',
@@ -19,7 +21,24 @@ export class ClientAccountComponent implements OnInit {
       city: ''
     },
     noTel: '',
-    listAccount: []
+    currentAccount: {
+      id: 0,
+      infoAccount: {
+        numAccount: '',
+        solde: 0,
+        openDate: ''
+      },
+      overDrawn: 0,
+    },
+    savingAccount: {
+      id: 0,
+      infoAccount: {
+        numAccount: '',
+        solde: 0,
+        openDate: ''
+      },
+      payRate: 0,
+    },
   };
 
   constructor(
