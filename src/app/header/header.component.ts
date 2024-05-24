@@ -1,10 +1,18 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { AuthService } from '../services/auth.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrl: './header.component.css'
+  styleUrls: ['./header.component.css']
 })
-export class HeaderComponent {
+export class HeaderComponent implements OnInit {
+  role$: Observable<string | null>;
 
+  constructor(private authService: AuthService) {
+    this.role$ = this.authService.currentRole$;
+  }
+
+  ngOnInit(): void {}
 }
