@@ -1,19 +1,15 @@
 body, html {
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4; 
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
 }
 
-
-
 .container {
-    width: 100%; 
-    max-width: 950px; 
+    width: 100%;
+    max-width: 950px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -33,16 +29,40 @@ body, html {
 }
 
 .login-section, .news-section {
-    background-color: white;
+    width: 100%;
+    min-height: calc(100vh - 80px);
+    /* background-color: white;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    margin-bottom: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); */
+    /* margin-bottom: 20px; */
 }
+
+
+.login-section {
+  display: flex;
+  margin-top: 130px;
+
+  h1 {
+    padding-bottom: 30px;
+  }
+
+  img {
+    width: 545px;
+    height: 470px;
+    object-fit: cover;
+    border-radius: 30px;
+  }
+
+  >div {
+    margin-top: 70px;
+  }
+}
+
 
 h1, h2 {
     color: #413993;
+    font-weight: bold;
     /* text-align: center; */
 }
 
@@ -56,17 +76,10 @@ h1, h2 {
 }
 
 .form-input input {
-    padding: 80px; 
-     margin-top: 5px; 
-     border: 1px solid #ccc;
-    border-radius: 4px; 
-}
-
-.separator {
-    width: 100%;
-    /* margin-top: 20%; */
-    border-top: 2px solid black;
-    margin: 50px 0; 
+    padding: 80px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
 }
 
 button {
@@ -75,35 +88,37 @@ button {
     background-color: #413993;
     color: white;
     border: none;
-    border-radius: 25px; 
+    border-radius: 25px;
     cursor: pointer;
 }
 .login-button {
-    width: 10%;
-    padding: 10px;
+    margin-top: 20px;
+    width: 25%;
+    padding: 7px;
     background-color: #413993;
     color: white;
     border: none;
-    border-radius: 25px; 
+    border-radius: 25px;
     cursor: pointer;
 }
 
 .login-button:hover {
-    background-color: #332277; 
+    background-color: #332277;
 }
 
 .button:hover {
-    background-color: #332277; 
+    background-color: #332277;
 }
 
 .news-section {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
+
 .image-section {
-    width: 300px; 
-    height: 300px; 
-    background-color: black; 
+    width: 300px;
+    height: 300px;
+    background-color: black;
     border-radius: 8px;
 }
 
