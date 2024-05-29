@@ -6,11 +6,35 @@
 
     <div class="advisors-section">
       <h2>All advisors</h2>
+      <div *ngFor="let advisor of advisors">
+        <a (click)="selectAdvisor(advisor)">{{ advisor.lastName | uppercase }} {{ advisor.firstName }}</a>
+      </div>
+
     </div>
 
     <div class="info-section">
       <h2>Advisor info</h2>
+      <div *ngIf="selectedAdvisor">
+
+        <div class="d-flex justify-content-between">
+          <p>First name</p>
+          <p>{{ selectedAdvisor.firstName }}</p>
+        </div>
+
+        <div class="d-flex justify-content-between">
+          <p>Last name</p>
+          <p>{{ selectedAdvisor.lastName | uppercase }}</p>
+        </div>
+
+        <div class="d-flex justify-content-between">
+          <p>Email</p>
+          <p>{{ selectedAdvisor.email }}</p>
+        </div>
+
+      </div>
+
         <h3>Clients</h3>
+
     </div>
 
   </div>

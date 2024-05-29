@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms'; 
+import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './pages/login/login.component';
-import { ClientListComponent } from './pages/client-list/client-list.component';  
+import { ClientListComponent } from './pages/client-list/client-list.component';
 import { AppRoutesModule } from './app-routing.module';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { HttpClientModule } from '@angular/common/http';
@@ -17,7 +17,8 @@ import { CommonModule } from '@angular/common';
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
-import { ClientAccountComponent } from './pages/client-account/client-account.component'; 
+import { ClientAccountComponent } from './pages/client-account/client-account.component';
+import { AdvisorsListComponent } from './pages/advisors-list/advisors-list.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { ClientAccountComponent } from './pages/client-account/client-account.co
     ClientEditComponent,
     FooterComponent,
     HeaderComponent,
-    ClientAccountComponent 
+    ClientAccountComponent,
+    AdvisorsListComponent
   ],
   imports: [
     BrowserModule,
@@ -41,7 +43,7 @@ import { ClientAccountComponent } from './pages/client-account/client-account.co
     MatToolbarModule,
     MatTableModule,
     MatButtonModule,
-    CommonModule 
+    CommonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
