@@ -30,11 +30,9 @@ export class ClientListComponent implements OnInit {
   }
 
   showClient(id: number) {
-    // Logique pour afficher les détails du client
   }
 
   editClient(id: number) {
-    // Logique pour éditer le client
   }
 
   deleteClient(id: number) {
