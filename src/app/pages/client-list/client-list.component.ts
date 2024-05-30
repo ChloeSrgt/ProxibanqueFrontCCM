@@ -4,14 +4,17 @@ import { Client } from '../../model/client';
 import { Router } from '@angular/router';
 import { Address } from '../../model/address';
 
+
 @Component({
   selector: 'app-client-list',
   templateUrl: './client-list.component.html',
   styleUrls: ['./client-list.component.css']
 })
 export class ClientListComponent implements OnInit {
+
   displayedColumns: string[] = ['id', 'lastName', 'firstName', 'city', 'noTel', 'account', 'edit'];
   dataSource: Client[] = [];
+  snackBar: any;
 
   constructor(private clientService: ClientService, private router: Router) {}
 
@@ -31,10 +34,34 @@ export class ClientListComponent implements OnInit {
 
   showClient(id: number) {
   }
+  
+  editClient(id: number, client : Client) {
+    this.clientService.updateClient(id,client).subscribe(
+      result => {
+        setTimeout(()=> {
+          this.goToEditClient();
+        })
+      },
+      error=> {
+        console.error('This was an error !', error);
+        this.showMessage('Error Editing client','error');
+      }
+    )
+  };
 
-  editClient(id: number) {
-  }
+showMessage(message: string, type :string){
+  this.snackBar.open(message, 'Close', {
+    duration: 2000,
+    horizontalPosition: 'right',
+    verticalPosition: 'top',
+    panelClass: type === 'success' ? 'success-snackbar' : 'error-snackbar'
+  });
+}
 
+  goToEditClient() {
+    this.router.navigate(['/client-edit']);
+  } 
+  
   deleteClient(id: number) {
     this.clientService.deleteClient(id).subscribe(() => {
       this.dataSource = this.dataSource.filter(client => client.id !== id);
