@@ -1,1 +1,49 @@
-<p>advisors-list works!</p>
+<div class="container text-center">
+  <p class="advisor-name">Hi Morgan</p>
+  <h1>Nantes agency</h1>
+
+  <div class="sections">
+
+    <div class="advisors-section">
+      <h2>All advisors</h2>
+      <div *ngFor="let advisor of advisors">
+        <a (click)="selectAdvisor(advisor)">{{ advisor.lastName | uppercase }} {{ advisor.firstName }}</a>
+      </div>
+
+    </div>
+
+    <div class="info-section">
+      <h2>Advisor info</h2>
+      <div *ngIf="selectedAdvisor">
+
+        <div class="d-flex justify-content-between">
+          <h3>First name</h3>
+          <p>{{ selectedAdvisor.firstName }}</p>
+        </div>
+
+        <div class="d-flex justify-content-between">
+          <h3>Last name</h3>
+          <p>{{ selectedAdvisor.lastName | uppercase }}</p>
+        </div>
+
+        <div class="d-flex justify-content-between">
+          <h3>Email</h3>
+          <p>{{ selectedAdvisor.email }}</p>
+        </div>
+
+      </div>
+
+        <div *ngIf="selectedAdvisor">
+          <h3 class="info-clients">Clients</h3>
+          <ul>
+            <li *ngFor="let client of selectedAdvisor?.clients">
+              {{ client.lastName | uppercase }} {{ client.firstName }}
+            </li>
+          </ul>
+        </div>
+
+    </div>
+
+  </div>
+
+</div>

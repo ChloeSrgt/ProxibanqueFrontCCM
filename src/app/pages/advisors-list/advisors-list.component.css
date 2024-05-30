@@ -1,0 +1,74 @@
+.advisor-name {
+  font-size: 20px;
+  color:#959AA6!important;
+  font-weight: 500;
+}
+
+h1, h2 {
+  color: #413993;
+}
+
+h2 {
+  font-size: 20px;
+  font-weight: 700;
+  padding-bottom: 20px;
+}
+
+h3 {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+a {
+  cursor: pointer;
+  color:#959AA6!important;
+  font-weight: 500;
+  line-height: 2em;
+}
+
+a:hover {
+  color: #413993!important;
+  text-decoration:  underline!important;
+}
+
+p {
+  color:#959AA6!important;
+  font-weight: 500;
+  line-height: 2em;
+  margin: 0%;
+  padding: 0%;
+}
+
+ul {
+  list-style:none;
+  padding: 0px;
+  margin: 0px;
+  line-height: 2em;
+  color:#959AA6!important;
+  font-weight: 500;
+}
+
+.container {
+  height: 70vh;
+  margin-block: 75px;
+}
+
+.sections {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding-top: 75px;
+}
+
+.advisors-section, .info-section {
+  border: 1.5px solid #EDF0F6;
+  border-radius: 30px;
+  padding: 20px;
+  margin-bottom: 50px;
+  text-align: left;
+  width: 430px;
+}
+
+.info-clients {
+  padding-top: 20px;
+}
