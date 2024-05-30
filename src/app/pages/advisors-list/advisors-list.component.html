@@ -33,7 +33,14 @@
 
       </div>
 
-        <h3 class="info-clients">Clients</h3>
+        <div *ngIf="selectedAdvisor">
+          <h3 class="info-clients">Clients</h3>
+          <ul>
+            <li *ngFor="let client of selectedAdvisor?.clients">
+              {{ client.lastName | uppercase }} {{ client.firstName }}
+            </li>
+          </ul>
+        </div>
 
     </div>
 

@@ -11,7 +11,7 @@ h1, h2 {
 h2 {
   font-size: 20px;
   font-weight: 700;
-  padding-bottom: 30px;
+  padding-bottom: 20px;
 }
 
 h3 {
@@ -37,6 +37,15 @@ p {
   line-height: 2em;
   margin: 0%;
   padding: 0%;
+}
+
+ul {
+  list-style:none;
+  padding: 0px;
+  margin: 0px;
+  line-height: 2em;
+  color:#959AA6!important;
+  font-weight: 500;
 }
 
 .container {
