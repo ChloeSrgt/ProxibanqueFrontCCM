@@ -1,0 +1,81 @@
+.client-create-container {
+    max-width: 900px;
+    align-items: center;
+    margin: 10% auto;
+    margin-top: 50px 0 0 0;
+    padding: 40px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    text-align: center;
+}
+
+.client-create-container h2 {
+    margin-bottom: 20px;
+    font-size: 34px;
+    color: #413993;
+}
+
+.client-create-container .form-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.client-create-container .form-group {
+    flex: 0 0 48%;
+    display: flex;
+    align-items: center;
+    text-align: left;
+}
+
+.client-create-container .form-group label {
+    flex: 0 0 40%;
+    margin-right: 5px;
+    font-weight: bold;
+}
+
+.client-create-container .form-group input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.client-create-container .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 20px;
+    background-color: #413993;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 30px;
+}
+
+.client-create-container .btn:hover {
+    background-color: #2c287a;
+}
+
+.back-to-list {
+    display: block;
+    margin-bottom: 20px;
+    color: #413993;
+    text-decoration: none;
+    display: flex;
+    justify-content: left;
+    font-weight: bold;
+}
+.back-to-list:hover {
+    color: #7e6ec7; 
+}
+.client-create-container .btn:hover {
+    background-color: #7e6ec7; 
+}
+
+.back-to-list i {
+    margin-right: 5px;
+}

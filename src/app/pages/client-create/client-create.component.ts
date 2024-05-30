@@ -1,8 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, Input, Output } from '@angular/core';
 import { ClientService } from '../../services/client.service';
 import { Client } from '../../model/client';
 import { Router } from '@angular/router';
 import { MatSnackBar } from '@angular/material/snack-bar';
+
 
 @Component({
   selector: 'app-client-create',
@@ -11,6 +12,10 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 })
 export class ClientCreateComponent {
   client: Client = new Client();
+
+
+
+  public firstName = this.client.firstName;
 
   constructor(
     private clientService: ClientService,

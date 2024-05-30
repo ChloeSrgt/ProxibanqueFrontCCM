@@ -1,1 +1,37 @@
-<h1>Coucou</h1>
+<div class="client-create-container">
+    <h2>Edit client</h2>
+    <a routerLink="/client-list" class="back-to-list"> < Back to client list</a>
+    <form (ngSubmit)="updateClient()">
+        <div  class="form-row">
+            <div class="form-group">
+                <label for="firstName">First name:</label>
+                <input type="text" id="firstName"  name="firstName" placeholder="{{clientDetails.firstName}}">
+            </div>
+            <div class="form-group">
+                <label for="lastName">Last name:</label>
+                <input type="text" id="lastName"  name="lastName" placeholder="{{clientDetails.lastName}}">
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group">
+                <label for="address">Street:</label>
+                <input type="text" id="address" name="address" placeholder="{{clientDetails.address.street}}">
+            </div>
+            <div class="form-group">
+                <label for="postalCode">Postal code:</label>
+                <input type="text" id="postalCode" name="postalCode" placeholder="{{clientDetails.address.postalCode}}">
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group">
+                <label for="city">City:</label>
+                <input type="text" id="city"  name="city" placeholder="{{clientDetails.address.city}}">
+            </div>
+            <div class="form-group">
+                <label for="noTel">Phone:</label>
+                <input type="text" id="noTel"  name="noTel" placeholder="{{clientDetails.noTel}}">
+            </div>
+        </div>
+        <button type="submit"  class="btn btn-primary">Edit Client</button>
+    </form>
+</div>
