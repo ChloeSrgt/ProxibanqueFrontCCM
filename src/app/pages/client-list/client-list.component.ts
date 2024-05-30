@@ -33,10 +33,8 @@ export class ClientListComponent implements OnInit {
   }
 
   showClient(id: number) {
-    // Logique pour afficher les détails du client
   }
-
-
+  
   editClient(id: number, client : Client) {
     this.clientService.updateClient(id,client).subscribe(
       result => {
@@ -63,7 +61,7 @@ showMessage(message: string, type :string){
   goToEditClient() {
     this.router.navigate(['/client-edit']);
   } 
-
+  
   deleteClient(id: number) {
     this.clientService.deleteClient(id).subscribe(() => {
       this.dataSource = this.dataSource.filter(client => client.id !== id);
