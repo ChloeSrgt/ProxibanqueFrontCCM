@@ -1,5 +1,5 @@
 <div class="container text-center">
-  <p>Hi Morgan</p>
+  <p class="advisor-name">Hi Morgan</p>
   <h1>Nantes agency</h1>
 
   <div class="sections">
@@ -17,17 +17,17 @@
       <div *ngIf="selectedAdvisor">
 
         <div class="d-flex justify-content-between">
-          <p>First name</p>
+          <h3 class="info-title">First name</h3>
           <p>{{ selectedAdvisor.firstName }}</p>
         </div>
 
         <div class="d-flex justify-content-between">
-          <p>Last name</p>
+          <h3 class="info-title">Last name</h3>
           <p>{{ selectedAdvisor.lastName | uppercase }}</p>
         </div>
 
         <div class="d-flex justify-content-between">
-          <p>Email</p>
+          <h3 class="info-title">Email</h3>
           <p>{{ selectedAdvisor.email }}</p>
         </div>
 
