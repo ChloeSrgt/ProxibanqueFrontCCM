@@ -17,17 +17,17 @@ h1 {
   text-align: center;
 }
 
-/* .client-list-container h2 {
-    margin-bottom: 20px;
-    font-size: 34px;
-    color: #413993;
-} */
-
 .client-table {
-    width: 100%;
-    border-collapse: collapse;
-    border: 1.5px solid #EDF0F6;
+  width: 100%;
+  border-collapse: collapse;
+  border-top: 1.5px solid #EDF0F6;
+  border-right: 1.5px solid #EDF0F6;
+  border-left: 1.5px solid #EDF0F6;
+  border-radius: 20px;
+  overflow: hidden;
+  border-collapse: separate;
 }
+
 
 .client-table th, .client-table td {
     padding: 12px 15px;
@@ -36,12 +36,14 @@ h1 {
 }
 
 .client-table th {
-    background-color: #f2f2f2;
+    background-color: #EDF0F6;
     font-size: 16px;
+    border-bottom: 1.5px solid #EDF0F6;
 }
 
 .client-table td {
     color: #959AA6;
+    border-bottom: 1.5px solid #EDF0F6;
 }
 
 .action-button {
