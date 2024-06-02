@@ -34,13 +34,15 @@ export class ClientListComponent implements OnInit {
 
   showClient(id: number) {
   }
+
+
   
   editClient(id: number, client : Client) {
-    this.clientService.updateClient(id,client).subscribe(
+    this.clientService.getClient(id).subscribe(
       result => {
         setTimeout(()=> {
-          this.goToEditClient();
-        })
+          this.goToEditClient(id);
+        }, 2000);
       },
       error=> {
         console.error('This was an error !', error);
@@ -48,6 +50,8 @@ export class ClientListComponent implements OnInit {
       }
     )
   };
+
+  
 
 showMessage(message: string, type :string){
   this.snackBar.open(message, 'Close', {
@@ -58,8 +62,8 @@ showMessage(message: string, type :string){
   });
 }
 
-  goToEditClient() {
-    this.router.navigate(['/client-edit']);
+  goToEditClient(id: number) {
+    this.router.navigate(['/client-edit',id]);
   } 
   
   deleteClient(id: number) {
