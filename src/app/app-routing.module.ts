@@ -13,27 +13,34 @@ import { ClientAccountComponent } from './pages/client-account/client-account.co
 import { advisorGuard } from './guard/advisor.guard';
 import { managerGuard } from './guard/manager.guard';
 
-
 export const routes: Routes = [
   { path: 'login', component: LoginComponent },
-  { path: 'client-list', component: ClientListComponent, canActivate:[advisorGuard]},
+  {
+    path: 'client-list',
+    component: ClientListComponent,
+    canActivate: [advisorGuard],
+  },
   { path: 'client-details', component: ClientDetailsComponent },
-  { path: 'statistics', component: StatisticsComponent,canActivate:[managerGuard] },
-  { path: 'advisors-list', component: AdvisorsListComponent,canActivate:[managerGuard] },
+  {
+    path: 'statistics',
+    component: StatisticsComponent,
+    canActivate: [managerGuard],
+  },
+  {
+    path: 'advisors-list',
+    component: AdvisorsListComponent,
+    canActivate: [managerGuard],
+  },
   { path: 'client-edit/:id', component: ClientEditComponent },
-  {path: 'client-create', component:ClientCreateComponent},
-  { path: ':id/accounts', component:ClientAccountComponent },
+  { path: 'client-create', component: ClientCreateComponent },
+  { path: 'accounts/:id', component: ClientAccountComponent },
   { path: '', redirectTo: '/login', pathMatch: 'full' },
-  { path: '**', redirectTo: '/login' }
+  { path: '**', redirectTo: '/login' },
 ];
 
-
-  @NgModule({
-    imports: [RouterModule.forRoot(routes)],
-    exports: [RouterModule],
-    declarations: [
-
-    ]
-  })
-
-  export class AppRoutesModule { }
+@NgModule({
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule],
+  declarations: [],
+})
+export class AppRoutesModule {}

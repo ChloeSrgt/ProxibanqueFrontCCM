@@ -1,10 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ClientService } from '../../services/client.service';
-import { Client } from '../../model/client';
-import { InfoAccount } from '../../model/InfoAccount';
-import { CurrentAccount } from '../../model/currentAccount';
-// import { Card } from '../../model/card';
+import { MatDialog } from '@angular/material/dialog';
+import { BankTransferModalComponent } from '../../bank-transfer-modal/bank-transfer-modal.component';
+import { TransferService } from '../../services/transfer.service';
 
 @Component({
   selector: 'app-client-account',
@@ -12,44 +11,13 @@ import { CurrentAccount } from '../../model/currentAccount';
   styleUrls: ['./client-account.component.css']
 })
 export class ClientAccountComponent implements OnInit {
-  client: Client = {
-    id: 0,
-    firstName: '',
-    lastName: '',
-    address: {
-      street: '',
-      postalCode: '',
-      city: ''
-    },
-    noTel: '',
-    currentAccount: {
-      id: 0,
-      infoAccount: {
-        numAccount: '',
-        solde: 0,
-        openDate: ''
-      },
-      overDrawn: 0,
-    },
-    savingAccount: {
-      id: 0,
-      infoAccount: {
-        numAccount: '',
-        solde: 0,
-        openDate: ''
-      },
-      payRate: 0,
-    },
-    card: {
-      numCard: '',
-      expirationDate: '',
-      cardType: ''
-    }
-  };
+  client: any;
 
   constructor(
     private route: ActivatedRoute,
-    private clientService: ClientService
+    private clientService: ClientService,
+    private transferService: TransferService,
+    public dialog: MatDialog
   ) { }
 
   ngOnInit(): void {
@@ -87,5 +55,23 @@ export class ClientAccountComponent implements OnInit {
     const year = new Date().getFullYear() + Math.floor(Math.random() * 10);
     const formattedMonth = month < 10 ? '0' + month : month;
     return formattedMonth + '/' + year;
+  }
+
+  openTransferModal(fromAccount: string, toAccount: string): void {
+    const dialogRef = this.dialog.open(BankTransferModalComponent, {
+      width: '400px',
+      data: {
+        fromAccount,
+        toAccount,
+        fromAccountId: this.client.currentAccount.id,
+        toAccountId: this.client.savingAccount.id
+      }
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      if (result) {
+        this.clientService.getClient(this.client.id).subscribe(client => this.client = client);
+      }
+    });
   }
 }

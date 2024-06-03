@@ -1,0 +1,30 @@
+<div class="transfer-modal">
+    <div class="modal-header">
+      <h2>Bank transfer</h2>
+      <button class="close-button" (click)="onNoClick()">×</button>
+    </div>
+    <div class="transfer-accounts">
+      <div class="account from">
+        <p>From:</p>
+        <p>{{ fromAccount }}</p>
+      </div>
+      <div class="transfer-direction" (click)="toggleDirection()">
+        ⬌
+      </div>
+      <div class="account to">
+        <p>To:</p>
+        <p>{{ toAccount }}</p>
+      </div>
+    </div>
+    <div class="amount-container">
+      <label for="amount">Amount</label>
+      <div class="amount-input">
+        <input matInput id="amount" [(ngModel)]="amount" type="number" placeholder="Amount">
+        <span>€</span>
+      </div>
+    </div>
+    <div class="modal-actions">
+      <button mat-button class="submit-button" (click)="submitTransfer()">Submit</button>
+    </div>
+  </div>
+  

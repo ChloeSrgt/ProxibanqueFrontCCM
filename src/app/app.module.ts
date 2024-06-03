@@ -20,6 +20,12 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { ClientAccountComponent } from './pages/client-account/client-account.component';
 import { AdvisorsListComponent } from './pages/advisors-list/advisors-list.component';
 import { StatisticsComponent } from './pages/statistics/statistics.component';
+import { BankTransferModalComponent } from './bank-transfer-modal/bank-transfer-modal.component';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatRadioModule } from '@angular/material/radio';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 @NgModule({
   declarations: [
@@ -32,8 +38,9 @@ import { StatisticsComponent } from './pages/statistics/statistics.component';
     FooterComponent,
     HeaderComponent,
     ClientAccountComponent,
+    BankTransferModalComponent,
     AdvisorsListComponent,
-    StatisticsComponent,
+    StatisticsComponent
   ],
   imports: [
     BrowserModule,
@@ -45,7 +52,11 @@ import { StatisticsComponent } from './pages/statistics/statistics.component';
     MatToolbarModule,
     MatTableModule,
     MatButtonModule,
-    CommonModule
+    CommonModule,
+    MatDialogModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatRadioModule
   ],
   providers: [],
   bootstrap: [AppComponent]

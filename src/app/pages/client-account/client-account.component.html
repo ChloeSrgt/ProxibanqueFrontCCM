@@ -53,10 +53,8 @@
         <h3>TOTAL</h3>
         <p class="solde">{{ client.currentAccount.infoAccount.solde + client.savingAccount.infoAccount.solde | currency: 'EUR' }}</p>
       </div>
-
     </div>
-
   </div>
 
-  <button class="btn btn-primary">+ Bank transfer</button>
+  <button class="btn btn-primary" (click)="openTransferModal('Current Account', 'Saving Account')">+ Bank transfer</button>
 </div>
