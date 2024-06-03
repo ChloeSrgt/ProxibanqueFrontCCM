@@ -40,11 +40,11 @@ export class ClientAccountComponent implements OnInit {
       },
       payRate: 0,
     },
-    // card: {
-    //   numCard: '',
-    //   expirationDate: '',
-    //   cardType: ''
-    // }
+    card: {
+      numCard: '',
+      expirationDate: '',
+      cardType: ''
+    }
   };
 
   constructor(

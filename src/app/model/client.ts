@@ -11,7 +11,7 @@ export class Client {
     noTel: string = '';
     currentAccount: CurrentAccount = new CurrentAccount();
     savingAccount: SavingAccount = new SavingAccount();
-    // card: Card = new Card();
+    card: Card = new Card();
 
     constructor(data: Partial<Client> = {}) {
         Object.assign(this, data);
