@@ -5,10 +5,15 @@ nav {
   align-items: center;
   justify-content: space-between;
   border-bottom: 1px solid #EDF0F6;
+
+  a {
+    transition: color 0.3s ease;
+  }
 }
 
 nav a:hover{
-  color: #332277;
+  color: #584FBA;
+  transition: color 0.3s ease;
 }
 
 .rightside-navbar {
@@ -50,4 +55,3 @@ nav {
   margin-left: 1rem;
   padding-left: 10px;
 }
-
