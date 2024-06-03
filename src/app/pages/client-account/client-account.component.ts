@@ -59,7 +59,7 @@ export class ClientAccountComponent implements OnInit {
 
   openTransferModal(fromAccount: string, toAccount: string): void {
     const dialogRef = this.dialog.open(BankTransferModalComponent, {
-      width: '400px',
+      width: '600px',
       data: {
         fromAccount,
         toAccount,
