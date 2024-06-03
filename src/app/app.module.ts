@@ -19,6 +19,7 @@ import { HeaderComponent } from './header/header.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { ClientAccountComponent } from './pages/client-account/client-account.component';
 import { AdvisorsListComponent } from './pages/advisors-list/advisors-list.component';
+import { StatisticsComponent } from './pages/statistics/statistics.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { AdvisorsListComponent } from './pages/advisors-list/advisors-list.compo
     FooterComponent,
     HeaderComponent,
     ClientAccountComponent,
-    AdvisorsListComponent
+    AdvisorsListComponent,
+    StatisticsComponent,
   ],
   imports: [
     BrowserModule,
