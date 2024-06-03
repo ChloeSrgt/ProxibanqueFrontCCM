@@ -1,1 +1,19 @@
-<p>statistics works!</p>
+<div class="statistics-container">
+    <div class="chart-container">
+      <h3 style="color: #413993;">Transactions</h3>
+      <canvas id="transactionChart" width="400" height="400"></canvas>
+    </div>
+    <div class="overdrawn-clients-container">
+      <h3 style="color: #413993;">4 overdrawn accounts</h3>
+      <ul class="clients-list">
+        <li *ngFor="let item of overdrawnClients | slice:0:4">
+          <div class="client-info">
+            <span class="client-name">{{ item.client.firstName }} {{ item.client.lastName }}</span>
+            <span class="client-account">{{ item.numAccount }}</span>
+          </div>
+          <span class="overdrawn-amount">- {{ item.overDrawn | currency:'EUR' }}</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+  
