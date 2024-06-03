@@ -6,7 +6,7 @@ footer {
   font-size: 14px;
   font-weight: 300;
   box-sizing: border-box;
-  position: fixed;
+  /* position: fixed; */
   bottom: 0;
   left: 0;
   display: flex;
