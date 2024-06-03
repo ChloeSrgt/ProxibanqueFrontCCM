@@ -31,22 +31,14 @@ export class ClientEditComponent implements OnInit{
 
 
 
-  updateClient(){
-    if(window.confirm('Are you sure, you want to update ?')){
-      this.service.updateClient(this.id,this.clientDetails).subscribe(
-        result=>{
-          setTimeout(()=> {
-            this.router.navigate(['/client-list'])
-          }, 2000);
-      },
-      error => {
-        console.error('This was an error !', error);
-        this.router.navigate(['/client-edit','id'])
-        this.showMessage('Error Editing Client','error');
-      }
-    );
+  editClient(){
+    if ( window.confirm('Are you sure, you want to update?')) {
+      this.service.updateClient(this.id, this.clientDetails).subscribe(data => {
+        this.router.navigate(['/client-list'])
+      })
+    }
   };
-}
+
 
 showMessage(message: string, type :string){
   this.snackBar.open(message, 'Close', {
