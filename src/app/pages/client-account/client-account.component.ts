@@ -4,6 +4,7 @@ import { ClientService } from '../../services/client.service';
 import { Client } from '../../model/client';
 import { InfoAccount } from '../../model/InfoAccount';
 import { CurrentAccount } from '../../model/currentAccount';
+import { Card } from '../../model/card';
 
 @Component({
   selector: 'app-client-account',
@@ -39,6 +40,11 @@ export class ClientAccountComponent implements OnInit {
       },
       payRate: 0,
     },
+    card: {
+      numCard: '',
+      expirationDate: '',
+      cardType: ''
+    }
   };
 
   constructor(
