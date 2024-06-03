@@ -84,9 +84,8 @@ export class ClientAccountComponent implements OnInit {
 
   getRandomExpirationDate(): string {
     const month = Math.floor(Math.random() * 12) + 1;
-    const day = Math.floor(Math.random() * 30) + 1;
+    const year = new Date().getFullYear() + Math.floor(Math.random() * 10);
     const formattedMonth = month < 10 ? '0' + month : month;
-    const formattedDay = day < 10 ? '0' + day : day;
-    return formattedDay + '/' + formattedMonth;
+    return formattedMonth + '/' + year;
   }
 }

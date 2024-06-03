@@ -108,28 +108,56 @@ button {
 
 .card {
   background-color: #413993;
-  width: 210px;
-  min-height: 125px;
-  border-radius: 20px;
+  min-height: 170px;
+  border-radius: 25px;
   color: white;
   padding: 15px;
   margin-top: 20px;
-
-  p {
-    font-size: 12px;
-  }
-}
-
-.name-expirationdate-infos {
-  font-size: 10px;
   display: flex;
   justify-content: space-between;
 
-  p {
-    margin-bottom: 2px;
+  >p {
+    font-size: 12px;
+    font-weight: 300;
   }
 }
 
+.name-date-infos {
+  display: flex;
+  justify-content: space-between;
+
+
+  p {
+    margin-bottom: 2px;
+    font-size: 12px;
+    font-weight: 200;
+  }
+}
+
+.name-info {
+  padding-right: 20px;
+}
+
 .numcard-info {
-  font-size: 12px;
+  font-size: 14px;
+  margin: 0;
+  font-weight: 300;
+}
+
+.card-infos {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cardtype-info {
+  background-color: #918DB8;
+  border-radius: 10%;
+  padding: 3px 5px;
+
+  p {
+    margin: 0;
+    font-weight: 600;
+    font-size: 14px;
+  }
 }
