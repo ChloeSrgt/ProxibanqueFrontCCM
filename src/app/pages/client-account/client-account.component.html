@@ -5,11 +5,13 @@
   <div class="tables">
     <div class="border-table card-table">
       <h2>Card</h2>
-        <h3>Name of the card</h3>
-        <div class="card">
+        <!-- <h3 *ngIf="client.card">{{ client.card.cardType }}</h3>
+        <div class="card" *ngIf="client.card">
           <p>ProxiBanque</p>
           <p>{{ client.lastName | uppercase }} {{ client.firstName }}</p>
-        </div>
+          <p>{{ client.card.expirationDate }}</p>
+          <p>{{ client.card.numCard }}</p> -->
+        <!-- </div> -->
     </div>
 
     <div class="border-table accounts-table">
