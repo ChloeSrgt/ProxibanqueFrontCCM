@@ -20,7 +20,7 @@
           <h3>Current Account</h3>
           <p class="num-account">{{ client.currentAccount.infoAccount.numAccount }}</p>
         </div>
-        <p>{{ client.currentAccount.infoAccount.solde | currency: 'EUR' }}</p>
+        <p class="solde">{{ client.currentAccount.infoAccount.solde | currency: 'EUR' }}</p>
       </div>
 
       <div class="account" *ngIf="client.savingAccount">
@@ -28,12 +28,12 @@
           <h3>Saving Account</h3>
           <p class="num-account">{{ client.savingAccount.infoAccount.numAccount }}</p>
         </div>
-        <p>{{ client.savingAccount.infoAccount.solde | currency: 'EUR' }}</p>
+        <p class="solde">{{ client.savingAccount.infoAccount.solde | currency: 'EUR' }}</p>
       </div>
 
       <div class="total-soldes" *ngIf="client.currentAccount && client.savingAccount">
         <h3>TOTAL</h3>
-        <p>{{ client.currentAccount.infoAccount.solde + client.savingAccount.infoAccount.solde | currency: 'EUR' }}</p>
+        <p class="solde">{{ client.currentAccount.infoAccount.solde + client.savingAccount.infoAccount.solde | currency: 'EUR' }}</p>
       </div>
 
     </div>

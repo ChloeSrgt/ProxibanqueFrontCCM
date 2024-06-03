@@ -27,6 +27,21 @@ h2 {
   justify-content: center;
 }
 
+.accounts-table {
+  min-width: 546px;
+
+  h2 {
+    font-size: 18px;
+    color: #959AA6;
+    font-weight: 500;
+  }
+
+  h3 {
+    text-decoration: underline;
+    font-size: 18px;
+  }
+}
+
 .client-name {
   font-size: 22px;
   color: #959AA6;
@@ -50,20 +65,6 @@ h2 {
   }
 }
 
-.accounts-table {
-  min-width: 546px;
-
-  h2 {
-    font-size: 16px;
-    color: #959AA6;
-  }
-
-  h3 {
-    text-decoration: underline;
-    font-size: 18px;
-  }
-}
-
 .account {
   display: flex;
   justify-content: space-between;
@@ -74,6 +75,11 @@ h2 {
   color: #959AA6;
   font-size: 16px;
   padding-top: 5px;
+}
+
+.solde {
+  color: #413993;
+  font-size: 18px;
 }
 
 .total-soldes {
