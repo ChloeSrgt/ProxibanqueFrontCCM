@@ -7,4 +7,6 @@ export class Card {
   constructor(data: Partial<Card> = {}) {
     Object.assign(this, data);
   }
+
+  
 }
