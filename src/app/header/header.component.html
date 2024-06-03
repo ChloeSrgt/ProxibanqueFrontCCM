@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="header.component.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <title>Document</title>
 </head>
 <body>
@@ -16,9 +17,11 @@
               <a *ngIf="role === 'manager'" [routerLink]="['/advisors-list']">Advisors List</a>
               <a *ngIf="role === 'advisor'" [routerLink]="['/client-create']">Add Client</a>
               <a *ngIf="role === 'advisor'" [routerLink]="['/client-list']">Client List</a>
+              <span>Site de Nantes</span>
+              <a *ngIf="role" (click)="logout()" style="cursor: pointer; margin-left: auto;">
+                <i class="fa-solid fa-right-to-bracket"></i>
+              </a>
           </ng-container>
-
-          <span>Site de Nantes</span>
         </div>
     </nav>
 </body>
