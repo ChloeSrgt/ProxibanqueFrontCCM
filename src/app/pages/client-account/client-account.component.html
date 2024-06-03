@@ -1,8 +1,8 @@
-<div class="container text-center">
+<div class="container">
   <p class="client-name">{{ client.lastName | uppercase }} {{ client.firstName }}</p>
   <h1>Client account</h1>
 
-  <div class="display-flex center-content tables">
+  <div class="tables">
     <div class="border-table card-table">
       <h2>Card</h2>
         <h3>Name of the card</h3>
@@ -18,7 +18,7 @@
       <div class="account" *ngIf="client.currentAccount">
         <div>
           <h3>Current Account</h3>
-          <p>{{ client.currentAccount.infoAccount.numAccount }}</p>
+          <p class="num-account">{{ client.currentAccount.infoAccount.numAccount }}</p>
         </div>
         <p>{{ client.currentAccount.infoAccount.solde | currency: 'EUR' }}</p>
       </div>
@@ -26,7 +26,7 @@
       <div class="account" *ngIf="client.savingAccount">
         <div>
           <h3>Saving Account</h3>
-          <p>{{ client.savingAccount.infoAccount.numAccount }}</p>
+          <p class="num-account">{{ client.savingAccount.infoAccount.numAccount }}</p>
         </div>
         <p>{{ client.savingAccount.infoAccount.solde | currency: 'EUR' }}</p>
       </div>
@@ -40,5 +40,5 @@
 
   </div>
 
-  <button class="btn btn-primary">Bank transfer</button>
+  <button class="btn btn-primary">+ Bank transfer</button>
 </div>
