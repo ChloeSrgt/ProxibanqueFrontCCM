@@ -5,13 +5,13 @@
   <div class="tables">
     <div class="border-table card-table">
       <h2>Card</h2>
-        <h3 *ngIf="client.card">{{ client.card.cardType }}</h3>
-        <div class="card" *ngIf="client.card">
-          <p>ProxiBanque</p>
-          <p>{{ client.lastName | uppercase }} {{ client.firstName }}</p>
-          <p>{{ client.card.expirationDate }}</p>
-          <p>{{ client.card.numCard }}</p> 
-        </div>
+      <h3 *ngIf="client.card">{{ client.card.cardType }}</h3>
+      <div class="card" *ngIf="client.card">
+        <p>ProxiBanque</p>
+        <p>{{ client.lastName | uppercase }} {{ client.firstName }}</p>
+        <p>{{ client.card.expirationDate }}</p>
+        <p>{{ client.card.numCard }}</p>
+      </div>
     </div>
 
     <div class="border-table accounts-table">
@@ -37,10 +37,8 @@
         <h3>TOTAL</h3>
         <p class="solde">{{ client.currentAccount.infoAccount.solde + client.savingAccount.infoAccount.solde | currency: 'EUR' }}</p>
       </div>
-
     </div>
-
   </div>
 
-  <button class="btn btn-primary">+ Bank transfer</button>
+  <button class="btn btn-primary" (click)="openTransferModal('Current Account', 'Saving Account')">+ Bank transfer</button>
 </div>

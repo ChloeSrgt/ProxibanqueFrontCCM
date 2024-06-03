@@ -1,11 +1,10 @@
-import { Component, Input, Output } from '@angular/core';
+import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { ClientService } from '../../services/client.service';
 import { Client } from '../../model/client';
 import { CurrentAccount } from '../../model/currentAccount';
 import { SavingAccount } from '../../model/savingAccount';
-import { Router } from '@angular/router';
-import { MatSnackBar } from '@angular/material/snack-bar';
-
 
 @Component({
   selector: 'app-client-create',
@@ -15,10 +14,6 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 export class ClientCreateComponent {
   client: Client = new Client();
 
-
-
-  public firstName = this.client.firstName;
-
   constructor(
     private clientService: ClientService,
     private router: Router,
@@ -26,11 +21,10 @@ export class ClientCreateComponent {
   ) {}
 
   onSubmit() {
-
     this.client.currentAccount = new CurrentAccount({
       infoAccount: {
         numAccount: this.generateRandomAccountNumber(),
-        solde: 0,
+        solde: 0, // Let backend handle balance generation
         openDate: new Date().toISOString().split('T')[0] 
       },
       overDrawn: 1000
@@ -39,8 +33,8 @@ export class ClientCreateComponent {
     this.client.savingAccount = new SavingAccount({
       infoAccount: {
         numAccount: this.generateRandomAccountNumber(),
-        solde: 0,
-        openDate: new Date().toISOString().split('T')[0] // YYYY-MM-DD format
+        solde: 0, // Let backend handle balance generation
+        openDate: new Date().toISOString().split('T')[0] 
       },
       payRate: 0.03
     });
@@ -50,7 +44,7 @@ export class ClientCreateComponent {
         this.showNotification('Client created successfully!', 'success');
         setTimeout(() => {
           this.router.navigate(['/client-list']);
-        }, 2000); // Redirection après 2 secondes
+        }, 2000); // Redirection after 2 seconds
       },
       error => {
         console.error('There was an error!', error);
