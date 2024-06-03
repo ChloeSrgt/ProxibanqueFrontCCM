@@ -30,13 +30,12 @@ body, html {
 
 .login-section, .news-section {
     width: 100%;
-    min-height: calc(80vh);
 }
-
 
 .login-section {
   display: flex;
   padding-top: 130px;
+  min-height: calc(80vh);
 
   h1 {
     padding-bottom: 30px;
@@ -92,6 +91,7 @@ button {
     border-radius: 25px;
     cursor: pointer;
     margin-top: 20px;
+    transition: background-color 0.3s ease;
 }
 
 .login-button {
@@ -103,14 +103,15 @@ button {
     border: none;
     border-radius: 25px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 .login-button:hover {
-    background-color: #332277;
+    background-color: #584FBA;;
 }
 
-.button:hover {
-    background-color: #332277;
+button:hover {
+    background-color: #584FBA;;
 }
 
 .grey-container {
@@ -118,6 +119,7 @@ button {
 }
 
 .news-section {
+  min-height: calc(65vh);
 
   h2 {
     color: #413993;
