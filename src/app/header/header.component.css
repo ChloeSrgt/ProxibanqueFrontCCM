@@ -34,3 +34,20 @@ nav span{
   right: 20px;
 
 }
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+}
+
+.rightside-navbar {
+  display: flex;
+  align-items: center;
+}
+
+.rightside-navbar a {
+  margin-left: 1rem;
+  padding-left: 10px;
+}
+
