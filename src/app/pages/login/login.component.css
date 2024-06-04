@@ -12,8 +12,10 @@ body, html {
 }
 
 .input-group {
-    margin-bottom: 15px;
-    align-items: center
+  margin-bottom: 15px;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 50px;
 }
 
 
