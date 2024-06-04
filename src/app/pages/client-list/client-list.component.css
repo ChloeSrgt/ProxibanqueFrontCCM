@@ -35,6 +35,7 @@ h1 {
     text-align: left;
     font-family: 'Inter';
     border-bottom: 1.5px solid #EDF0F6;
+    /* max-width: 30px !important; */
 }
 
 .client-table th {
@@ -44,6 +45,27 @@ h1 {
 
 .client-table td {
     color: #959AA6;
+}
+
+.mat-column-id, .mat-column-id {
+  text-align: center;
+}
+
+.account-icon {
+  color: #959AA6;
+}
+
+.edit-delete-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+
+  p {
+    align-items: center;
+    margin-bottom: 0;
+    padding: 12px 0px;
+    color: #959AA6;
+  }
 }
 
 .action-button {
