@@ -26,24 +26,24 @@ h1 {
   border-radius: 20px;
   overflow: hidden;
   border-collapse: separate;
+
 }
 
 
 .client-table th, .client-table td {
     padding: 12px 15px;
     text-align: left;
-    /* border-bottom: 1px solid #ddd; */
+    font-family: 'Inter';
+    border-bottom: 1.5px solid #EDF0F6;
 }
 
 .client-table th {
     background-color: #EDF0F6;
     font-size: 16px;
-    border-bottom: 1.5px solid #EDF0F6;
 }
 
 .client-table td {
     color: #959AA6;
-    border-bottom: 1.5px solid #EDF0F6;
 }
 
 .action-button {
