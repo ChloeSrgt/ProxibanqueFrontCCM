@@ -10,7 +10,7 @@
 
     <ng-container matColumnDef="lastName">
       <th mat-header-cell *matHeaderCellDef> Last name </th>
-      <td mat-cell *matCellDef="let client"> {{client.lastName}} </td>
+      <td mat-cell *matCellDef="let client"> {{client.lastName | uppercase}} </td>
     </ng-container>
 
     <ng-container matColumnDef="firstName">
