@@ -33,8 +33,8 @@ export class ClientListComponent implements OnInit {
   }
 
   showClient(id: number) {
-  }
-
+    this.router.navigate(['/accounts', id]);
+  };
 
   
   editClient(id: number, client : Client) {

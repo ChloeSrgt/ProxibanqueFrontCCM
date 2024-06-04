@@ -21,6 +21,10 @@ export class ClientAccountComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+    this.loadClientData();
+  }
+
+  loadClientData(): void {
     const id = this.route.snapshot.paramMap.get('id');
     this.clientService.getClient(id).subscribe(client => {
       this.client = client;
@@ -49,7 +53,6 @@ export class ClientAccountComponent implements OnInit {
     return numCard;
   }
 
-
   getRandomExpirationDate(): string {
     const month = Math.floor(Math.random() * 12) + 1;
     const year = new Date().getFullYear() + Math.floor(Math.random() * 10);
@@ -60,6 +63,7 @@ export class ClientAccountComponent implements OnInit {
   openTransferModal(fromAccount: string, toAccount: string): void {
     const dialogRef = this.dialog.open(BankTransferModalComponent, {
       width: '600px',
+      // height: '500px',
       data: {
         fromAccount,
         toAccount,
@@ -69,8 +73,8 @@ export class ClientAccountComponent implements OnInit {
     });
 
     dialogRef.afterClosed().subscribe(result => {
-      if (result) {
-        this.clientService.getClient(this.client.id).subscribe(client => this.client = client);
+      if (result && result.success) {
+        this.loadClientData(); 
       }
     });
   }
