@@ -18,7 +18,9 @@ export class TransferService {
       toAccountId: toAccountId.toString()
     };
     return this.http.post<any>(this.endpoint, {}, { params })
-      .pipe(catchError(this.handleError));
+      .pipe(
+        catchError(this.handleError)
+      );
   }
 
   private handleError(error: any) {

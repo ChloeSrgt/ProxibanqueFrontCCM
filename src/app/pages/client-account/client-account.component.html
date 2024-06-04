@@ -5,29 +5,25 @@
   <div class="tables">
     <div class="border-table card-table">
       <h2>Card</h2>
-        <h3 *ngIf="client.card">{{ client.card.cardType }}</h3>
-        <div class="card" *ngIf="client.card">
-
-          <div class="d-flex justify-content-between">
-            <p>ProxiBanque</p>
-            <i class="fa-solid fa-rss" style="color: #ffffff;"></i>
-          </div>
-
-          <div class="card-infos">
-            <div>
-              <div class="name-date-infos">
-                <p class="name-info">{{ client.lastName | uppercase }} {{ client.firstName }}</p>
-                <p>{{ client.card.expirationDate }}</p>
-              </div>
-              <p class="numcard-info">{{ client.card.numCard }}</p>
-            </div>
-
-            <div class="cardtype-info">
-              <p>VISA</p>
-            </div>
-          </div>
-
+      <h3 *ngIf="client.card">{{ client.card.cardType }}</h3>
+      <div class="card" *ngIf="client.card">
+        <div class="d-flex justify-content-between">
+          <p>ProxiBanque</p>
+          <i class="fa-solid fa-rss" style="color: #ffffff;"></i>
         </div>
+        <div class="card-infos">
+          <div>
+            <div class="name-date-infos">
+              <p class="name-info">{{ client.lastName | uppercase }} {{ client.firstName }}</p>
+              <p>{{ client.card.expirationDate }}</p>
+            </div>
+            <p class="numcard-info">{{ client.card.numCard }}</p>
+          </div>
+          <div class="cardtype-info">
+            <p>VISA</p>
+          </div>
+        </div>
+      </div>
     </div>
 
     <div class="border-table accounts-table">
