@@ -29,7 +29,8 @@
   
   .transfer-modal h2 {
     color: #413993;
-    font-size: 24px;
+    padding-bottom: 25px;
+    font-size: 36px;
   }
   
   .close-button {
@@ -37,11 +38,10 @@
     color: white;
     border: none;
     border-radius: 50%;
-    width: 35px;
-    height: 35px;
-    font-size: 20px;
+    width: 31px;
+    height: 32px;
+    font-size: 30px;
     cursor: pointer;
-    outline: none;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -70,8 +70,8 @@
   }
   
   .transfer-direction {
-    font-size: 30px;
-    color: #666;
+    font-size: 40px;
+    color:   #413993;
     cursor: pointer;
     transition: color 0.3s;
     user-select: none;
@@ -79,10 +79,6 @@
   
   .transfer-direction:hover {
     color: #40399377;
-  }
-  .transfer-direction{
-    color: #6058a0;
-    font-size: 40px;
   }
   
   .amount-container {
@@ -114,7 +110,7 @@
   }
   
   .amount-input span {
-    font-size: 20px;
+    /* font-size: 20px; */
     color: #666;
   }
   
@@ -139,3 +135,7 @@
     background-color: #341f71;
   }
   
+  .h2 {
+    padding-bottom: 75px;
+    font-size: 36px;
+  }

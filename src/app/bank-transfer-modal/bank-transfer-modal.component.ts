@@ -1,5 +1,6 @@
 import { Component, Inject } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { TransferService } from '../services/transfer.service';
 
 @Component({
   selector: 'app-bank-transfer-modal',
@@ -13,7 +14,8 @@ export class BankTransferModalComponent {
 
   constructor(
     public dialogRef: MatDialogRef<BankTransferModalComponent>,
-    @Inject(MAT_DIALOG_DATA) public data: any
+    @Inject(MAT_DIALOG_DATA) public data: any,
+    private transferService: TransferService
   ) {
     this.fromAccount = data.fromAccount;
     this.toAccount = data.toAccount;
@@ -24,10 +26,23 @@ export class BankTransferModalComponent {
   }
 
   toggleDirection(): void {
-    [this.fromAccount, this.toAccount] = [this.toAccount, this.fromAccount];
+    const temp = this.fromAccount;
+    this.fromAccount = this.toAccount;
+    this.toAccount = temp;
   }
 
   submitTransfer(): void {
-    this.dialogRef.close({ amount: this.amount, fromAccount: this.fromAccount, toAccount: this.toAccount });
+    const fromAccountId = this.data.fromAccountId;
+    const toAccountId = this.data.toAccountId;
+
+    this.transferService.transfer(this.amount, fromAccountId, toAccountId).subscribe(
+      response => {
+        this.dialogRef.close({ success: true });
+      },
+      error => {
+        console.error('Transfer failed', error);
+        this.dialogRef.close({ success: false });
+      }
+    );
   }
 }
