@@ -3,7 +3,6 @@ import { Advisor } from '../../model/advisor';
 import { Client } from '../../model/client';
 import { Chart, registerables } from 'chart.js';
 
-// Enregistrer les composants nécessaires
 Chart.register(...registerables);
 
 @Component({
