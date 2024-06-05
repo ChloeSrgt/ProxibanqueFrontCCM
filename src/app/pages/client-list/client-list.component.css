@@ -52,12 +52,12 @@ h1 {
 }
 
 .client-table th {
-  background-color: #EDF0F6;
+  background-color: #edf0f685;
   font-size: 16px;
 }
 
 .client-table td {
-  color: #959AA6;
+  color: #6e737c;
 }
 
 .mat-column-id {
