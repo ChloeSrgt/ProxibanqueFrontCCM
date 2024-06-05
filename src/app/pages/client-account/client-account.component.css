@@ -109,7 +109,8 @@ button {
 }
 
 .card {
-  background-color: #413993;
+  /* background-color: #413993; */
+  background: linear-gradient(to bottom right, #413993, #554caf);
   min-height: 170px;
   border-radius: 25px;
   color: white;
