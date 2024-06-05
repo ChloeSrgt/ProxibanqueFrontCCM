@@ -18,7 +18,9 @@ h2 {
 
 hr {
   margin: 0;
-
+  padding-top: 20px;
+  color: #edf0f6;
+  opacity: 1;
 }
 
 .container {
@@ -41,6 +43,8 @@ hr {
     font-size: 18px;
     color: #959aa6;
     font-weight: 500;
+    padding-bottom: 20px;
+    padding-top: 5px;
   }
 
   h3 {
@@ -93,12 +97,16 @@ hr {
 .total-soldes {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
 
   h3 {
     text-decoration: none;
-    color: #888383;
+    color: #959aa6;
     font-weight: 400;
+  }
+
+  p {
+    margin-bottom: 0px;
   }
 }
 
@@ -125,7 +133,7 @@ button:hover {
   border-radius: 25px;
   color: white;
   padding: 15px;
-  margin-top: 20px;
+  margin-top: 30px;
   display: flex;
   justify-content: space-between;
 
