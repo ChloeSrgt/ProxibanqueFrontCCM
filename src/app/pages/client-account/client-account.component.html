@@ -29,6 +29,8 @@
     <div class="border-table accounts-table">
       <h2>{{ client.lastName | uppercase }} {{ client.firstName }}</h2>
 
+      <hr>
+
       <div class="account" *ngIf="client.currentAccount">
         <div>
           <h3>Current Account</h3>
@@ -36,6 +38,8 @@
         </div>
         <p class="solde">{{ client.currentAccount.infoAccount.solde | currency: 'EUR' }}</p>
       </div>
+
+      <hr>
 
       <div class="account" *ngIf="client.savingAccount">
         <div>
@@ -45,6 +49,8 @@
         <p class="solde">{{ client.savingAccount.infoAccount.solde | currency: 'EUR' }}</p>
       </div>
 
+      <hr>
+      
       <div class="total-soldes" *ngIf="client.currentAccount && client.savingAccount">
         <h3>TOTAL</h3>
         <p class="solde">{{ client.currentAccount.infoAccount.solde + client.savingAccount.infoAccount.solde | currency: 'EUR' }}</p>
