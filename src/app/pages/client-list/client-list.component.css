@@ -54,7 +54,7 @@ h1 {
 
 .client-table th, .client-table td {
   padding: 12px 15px;
-  text-align: left;
+  /* text-align: left; */
   font-family: 'Inter';
   border-bottom: 1.5px solid #EDF0F6;
 }
@@ -108,7 +108,7 @@ h1 {
   background: none;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  border-radius: 50%; 
+  border-radius: 50%;
 }
 
 .action-button:hover {
