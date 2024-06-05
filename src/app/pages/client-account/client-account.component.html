@@ -50,7 +50,7 @@
       </div>
 
       <hr>
-      
+
       <div class="total-soldes" *ngIf="client.currentAccount && client.savingAccount">
         <h3>TOTAL</h3>
         <p class="solde">{{ client.currentAccount.infoAccount.solde + client.savingAccount.infoAccount.solde | currency: 'EUR' }}</p>
@@ -58,5 +58,5 @@
     </div>
   </div>
 
-  <button class="btn btn-primary" (click)="openTransferModal('Current Account', 'Saving Account')">+ Bank transfer</button>
+  <button (click)="openTransferModal('Current Account', 'Saving Account')">Bank transfer</button>
 </div>
