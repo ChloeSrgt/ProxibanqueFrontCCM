@@ -41,12 +41,25 @@ h1 {
     color: #959AA6;
 }
 
-.mat-column-id, .mat-column-id {
+.mat-column-id {
   text-align: center;
+  width: 150px;
+}
+
+.mat-column-account {
+  width: 100px;
 }
 
 .account-icon {
   color: #959AA6;
+}
+
+.mat-column-edit {
+  width: 200px;
+}
+
+.cdk-column-edit {
+  padding-inline: 0px !important;
 }
 
 .edit-delete-icons {
