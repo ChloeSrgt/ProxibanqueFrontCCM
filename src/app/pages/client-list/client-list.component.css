@@ -20,6 +20,14 @@
   background-color: #584FBA;
 }
 
+.info {
+  cursor: pointer;
+}
+
+.info:hover {
+  font-weight: bolder;
+}
+
 h1 {
   color: #413993;
   padding-bottom: 30px;
