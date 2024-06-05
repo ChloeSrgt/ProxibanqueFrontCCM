@@ -16,6 +16,11 @@ h2 {
   font-weight: 700;
 }
 
+hr {
+  margin: 0;
+
+}
+
 .container {
   margin-block: 75px;
   min-height: 70vh;
@@ -149,6 +154,7 @@ button:hover {
   font-size: 14px;
   margin: 0;
   font-weight: 300;
+  letter-spacing: 2px;
 }
 
 .card-infos {
