@@ -1,0 +1,29 @@
+<div class="client-create-container">
+    <a routerLink="/client-list" class="back-to-list"> <- Back to client list</a>
+        <div class="form-row">
+            <div class="form-group"> 
+                <p class="bolding"> First name :  </p> <p class="space">   {{ clientInfo.firstName}} </p>
+            </div>
+            <div class="form-group">
+                <p class="bolding"> Last name :  </p> <p class="space">   {{ clientInfo.lastName}} </p>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group">
+                <p class="bolding"> Address :  </p> <p class="space">   {{ clientInfo.address.street}} </p>
+            </div>
+            <div class="form-group">
+                <p class="bolding"> Postal code :  </p> <p class="space">   {{ clientInfo.address.postalCode}} </p>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group">
+                <p class="bolding"> City :  </p> <p class="space">   {{ clientInfo.address.city}} </p>
+
+            </div>
+            <div class="form-group">
+                <p class="bolding"> Phone :  </p> <p class="space">   {{ clientInfo.noTel}} </p>
+            </div>
+        </div>
+
+</div>

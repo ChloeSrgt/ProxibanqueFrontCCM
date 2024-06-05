@@ -5,6 +5,7 @@ import { ClientService } from '../../services/client.service';
 import { Client } from '../../model/client';
 import { CurrentAccount } from '../../model/currentAccount';
 import { SavingAccount } from '../../model/savingAccount';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-client-create',
@@ -20,7 +21,11 @@ export class ClientCreateComponent {
     private snackBar: MatSnackBar
   ) {}
 
-  onSubmit() {
+  onSubmit(clientForm: NgForm) {
+    if(!clientForm.valid){
+      window.alert("Please, fill all the blanks.")
+      return
+    }
     this.client.currentAccount = new CurrentAccount({
       infoAccount: {
         numAccount: this.generateRandomAccountNumber(),

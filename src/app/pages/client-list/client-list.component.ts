@@ -12,6 +12,8 @@ import { Address } from '../../model/address';
 })
 export class ClientListComponent implements OnInit {
 
+
+
   displayedColumns: string[] = ['id', 'lastName', 'firstName', 'city', 'noTel', 'account', 'edit'];
   dataSource: Client[] = [];
   snackBar: any;
@@ -51,7 +53,9 @@ export class ClientListComponent implements OnInit {
     )
   };
 
-  
+  clientInfo(id: number): void {
+this.router.navigate(['/client-info',id]);
+}
 
 showMessage(message: string, type :string){
   this.snackBar.open(message, 'Close', {
