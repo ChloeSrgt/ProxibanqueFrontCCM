@@ -6,19 +6,18 @@ import { ClientEditComponent } from './pages/client-edit/client-edit.component';
 import { ClientListComponent } from './pages/client-list/client-list.component';
 import { StatisticsComponent } from './pages/statistics/statistics.component';
 import { ClientCreateComponent } from './pages/client-create/client-create.component';
-
 import { LoginComponent } from './pages/login/login.component';
-
 import { ClientAccountComponent } from './pages/client-account/client-account.component';
 import { advisorGuard } from './guard/advisor.guard';
 import { managerGuard } from './guard/manager.guard';
+import { ClientInfoComponent } from './pages/client-info/client-info.component';
 
-export const routes: Routes = [
+const routes: Routes = [
   { path: 'login', component: LoginComponent },
   {
     path: 'client-list',
     component: ClientListComponent,
-    canActivate: [advisorGuard],
+     canActivate: [advisorGuard], 
   },
   { path: 'client-details', component: ClientDetailsComponent },
   {
@@ -34,6 +33,7 @@ export const routes: Routes = [
   { path: 'client-edit/:id', component: ClientEditComponent },
   { path: 'client-create', component: ClientCreateComponent },
   { path: 'accounts/:id', component: ClientAccountComponent },
+  { path: 'client-info/:id', component: ClientInfoComponent },
   { path: '', redirectTo: '/login', pathMatch: 'full' },
   { path: '**', redirectTo: '/login' },
 ];
@@ -41,6 +41,5 @@ export const routes: Routes = [
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
-  declarations: [],
 })
 export class AppRoutesModule {}

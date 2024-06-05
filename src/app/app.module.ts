@@ -27,6 +27,8 @@ import { MatInputModule } from '@angular/material/input';
 import { MatRadioModule } from '@angular/material/radio';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
+import { ClientInfoComponent } from './pages/client-info/client-info.component';
+
 
 @NgModule({
   declarations: [
@@ -41,7 +43,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     ClientAccountComponent,
     BankTransferModalComponent,
     AdvisorsListComponent,
-    StatisticsComponent
+    StatisticsComponent,
+    ClientInfoComponent
   ],
   imports: [
     BrowserModule,
