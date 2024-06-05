@@ -20,14 +20,6 @@
   background-color: #584FBA;
 }
 
-.info {
-  cursor: pointer;
-}
-
-.info:hover {
-  font-weight: bolder;
-}
-
 h1 {
   color: #413993;
   padding-bottom: 30px;
@@ -65,7 +57,7 @@ h1 {
 }
 
 .client-table td {
-  color: #6e737c;
+  color: #63676f;
 }
 
 .mat-column-id {
