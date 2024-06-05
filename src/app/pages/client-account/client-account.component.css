@@ -90,8 +90,9 @@ h2 {
 
   h3 {
     text-decoration: none;
-    color: #D9D9D9;
+    color: #888383;
     font-weight: 400;
+    
   }
 }
 
@@ -104,6 +105,7 @@ button {
   border-radius: 25px;
   cursor: pointer;
   font-size: 16px;
+  
 }
 
 .card {
