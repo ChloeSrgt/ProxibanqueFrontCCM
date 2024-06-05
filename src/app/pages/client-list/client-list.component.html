@@ -44,10 +44,10 @@
       </th>
       <td mat-cell *matCellDef="let client" class="text-center">
         <button [routerLink]="['/client-edit', client.id]" (click)="editClient(client.id, client)" mat-icon-button class="action-button">
-          <i class="fa-solid fa-gear" style="color: #d9d9d9;"></i>
+          <i class="fa-solid fa-gear" style="color: #959AA6;"></i>
         </button>
         <button mat-icon-button (click)="deleteClient(client.id)" class="action-button">
-          <i class="fa-solid fa-trash" style="color: #d9d9d9;"></i>
+          <i class="fa-solid fa-trash" style="color: #959AA6;"></i>
         </button>
       </td>
     </ng-container>
