@@ -17,7 +17,7 @@
               <a *ngIf="role === 'manager'" [routerLink]="['/advisors-list']">Advisors List</a>
               <a *ngIf="role === 'advisor'" [routerLink]="['/client-create']">Add Client</a>
               <a *ngIf="role === 'advisor'" [routerLink]="['/client-list']">Client List</a>
-              <span>Site de Nantes</span>
+              <span>Nantes agency</span>
               <a *ngIf="role" (click)="logout()" style="cursor: pointer; margin-left: auto;">
                 <i class="fa-solid fa-right-to-bracket"></i>
               </a>
