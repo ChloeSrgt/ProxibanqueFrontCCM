@@ -1,6 +1,7 @@
-<div class="client-create-container">
-    <h2>Edit client</h2>
-    <a routerLink="/client-list" class="back-to-list"> < Back to client list</a>
+<div class="container">
+  <h1>Edit client</h1>
+  <a routerLink="/client-list" class="back-to-list"> <- Back to clients</a>
+  <div class="client-create-container">
     <form (ngSubmit)="editClient()">
         <div  class="form-row">
             <div class="form-group">
@@ -34,4 +35,5 @@
         </div>
         <button  type="submit" class="btn btn-primary">Edit Client</button>
     </form>
+  </div>
 </div>
