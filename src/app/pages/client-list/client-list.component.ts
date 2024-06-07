@@ -2,8 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { ClientService } from '../../services/client.service';
 import { Client } from '../../model/client';
 import { Router } from '@angular/router';
+import { MatDialog } from '@angular/material/dialog';
+import { MatSnackBar } from '@angular/material/snack-bar';  
+import { ConfirmDialogComponent } from '../../confirm-dialog/confirm-dialog.component';
 import { Address } from '../../model/address';
-
 
 @Component({
   selector: 'app-client-list',
@@ -12,13 +14,15 @@ import { Address } from '../../model/address';
 })
 export class ClientListComponent implements OnInit {
 
-
-
   displayedColumns: string[] = ['id', 'lastName', 'firstName', 'city', 'noTel', 'account', 'edit'];
   dataSource: Client[] = [];
-  snackBar: any;
 
-  constructor(private clientService: ClientService, private router: Router) {}
+  constructor(
+    private clientService: ClientService, 
+    private router: Router, 
+    private dialog: MatDialog,
+    private snackBar: MatSnackBar  
+  ) {}
 
   ngOnInit(): void {
     this.clientService.getClients().subscribe((data: Client[]) => {
@@ -38,41 +42,50 @@ export class ClientListComponent implements OnInit {
     this.router.navigate(['/accounts', id]);
   };
 
-  
-  editClient(id: number, client : Client) {
+  editClient(id: number, client: Client) {
     this.clientService.getClient(id).subscribe(
       result => {
         setTimeout(()=> {
           this.goToEditClient(id);
         }, 2000);
       },
-      error=> {
-        console.error('This was an error !', error);
-        this.showMessage('Error Editing client','error');
+      error => {
+        console.error('There was an error!', error);
+        this.showMessage('Error Editing client', 'error');
       }
     )
   };
 
   clientInfo(id: number): void {
-this.router.navigate(['/client-info',id]);
-}
+    this.router.navigate(['/client-info', id]);
+  }
 
-showMessage(message: string, type :string){
-  this.snackBar.open(message, 'Close', {
-    duration: 2000,
-    horizontalPosition: 'right',
-    verticalPosition: 'top',
-    panelClass: type === 'success' ? 'success-snackbar' : 'error-snackbar'
-  });
-}
+  showMessage(message: string, type: string) {
+    this.snackBar.open(message, 'Close', {
+      duration: 2000,
+      horizontalPosition: 'right',
+      verticalPosition: 'top',
+      panelClass: type === 'success' ? 'success-snackbar' : 'error-snackbar'
+    });
+  }
 
   goToEditClient(id: number) {
-    this.router.navigate(['/client-edit',id]);
+    this.router.navigate(['/client-edit', id]);
   } 
-  
+
   deleteClient(id: number) {
-    this.clientService.deleteClient(id).subscribe(() => {
-      this.dataSource = this.dataSource.filter(client => client.id !== id);
+    const dialogRef = this.dialog.open(ConfirmDialogComponent, {
+      data: {
+        message: 'Are you sure you want to delete?'
+      }
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      if (result) {
+        this.clientService.deleteClient(id).subscribe(() => {
+          this.dataSource = this.dataSource.filter(client => client.id !== id);
+        });
+      }
     });
   }
 }

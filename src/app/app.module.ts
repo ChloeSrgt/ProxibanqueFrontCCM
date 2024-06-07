@@ -28,6 +28,7 @@ import { MatRadioModule } from '@angular/material/radio';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ClientInfoComponent } from './pages/client-info/client-info.component';
+import { ConfirmDialogComponent } from './confirm-dialog/confirm-dialog.component';
 
 
 @NgModule({
@@ -44,7 +45,8 @@ import { ClientInfoComponent } from './pages/client-info/client-info.component';
     BankTransferModalComponent,
     AdvisorsListComponent,
     StatisticsComponent,
-    ClientInfoComponent
+    ClientInfoComponent,
+    ConfirmDialogComponent
   ],
   imports: [
     BrowserModule,
