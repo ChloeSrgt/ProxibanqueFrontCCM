@@ -4,31 +4,31 @@
         <div class="form-row">
             <div class="form-group"> 
                 <label for="firstName">First name:</label>
-                <input type="text" id="firstName" [(ngModel)]="client.firstName" name="firstName" required>
+                <input type="text" id="firstName" [(ngModel)]="client.firstName" name="firstName" placeholder="First Name" required>
             </div>
             <div class="form-group">
                 <label for="lastName">Last name:</label>
-                <input type="text" id="lastName" [(ngModel)]="client.lastName" name="lastName" required>
+                <input type="text" id="lastName" [(ngModel)]="client.lastName" name="lastName" placeholder="Last Name" required>
             </div>
         </div>
         <div class="form-row">
             <div class="form-group">
                 <label for="address">Address:</label>
-                <input type="text" id="address" [(ngModel)]="client.address.street" name="address" required>
+                <input type="text" id="address" [(ngModel)]="client.address.street" name="address" placeholder="Address" required>
             </div>
             <div class="form-group">
                 <label for="postalCode">Postal code:</label>
-                <input type="text" id="postalCode" [(ngModel)]="client.address.postalCode" name="postalCode" required>
+                <input type="text" id="postalCode" [(ngModel)]="client.address.postalCode" name="postalCode" placeholder="Postal Code" required>
             </div>
         </div>
         <div class="form-row">
             <div class="form-group">
                 <label for="city">City:</label>
-                <input type="text" id="city" [(ngModel)]="client.address.city" name="city" required>
+                <input type="text" id="city" [(ngModel)]="client.address.city" name="city" placeholder="City" required>
             </div>
             <div class="form-group">
                 <label for="noTel">Phone:</label>
-                <input type="text" id="noTel" [(ngModel)]="client.noTel" name="noTel" required>
+                <input type="text" id="noTel" [(ngModel)]="client.noTel" name="noTel" placeholder="0000000000" required>
             </div>
         </div>
         <button type="submit" class="btn btn-primary">Add client</button>

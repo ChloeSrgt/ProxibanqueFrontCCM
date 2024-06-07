@@ -65,6 +65,14 @@ h1 {
   width: 150px;
 }
 
+.info{
+  cursor: pointer;
+}
+
+.info:hover{
+  font-weight: bold;
+}
+
 .mat-column-account {
   width: 100px;
 }
