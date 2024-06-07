@@ -22,15 +22,15 @@ export class ClientCreateComponent {
   ) {}
 
   onSubmit(clientForm: NgForm) {
-    if(!clientForm.valid){
-      window.alert("Please, fill all the blanks.")
-      return
+    if (!clientForm.valid) {
+      this.showNotification('Please, fill all the blanks.', 'error');
+      return;
     }
     this.client.currentAccount = new CurrentAccount({
       infoAccount: {
         numAccount: this.generateRandomAccountNumber(),
-        solde: 0, // Let backend handle balance generation
-        openDate: new Date().toISOString().split('T')[0] 
+        solde: 0,
+        openDate: new Date().toISOString().split('T')[0]
       },
       overDrawn: 1000
     });
@@ -38,8 +38,8 @@ export class ClientCreateComponent {
     this.client.savingAccount = new SavingAccount({
       infoAccount: {
         numAccount: this.generateRandomAccountNumber(),
-        solde: 0, // Let backend handle balance generation
-        openDate: new Date().toISOString().split('T')[0] 
+        solde: 0,
+        openDate: new Date().toISOString().split('T')[0]
       },
       payRate: 0.03
     });
@@ -49,7 +49,7 @@ export class ClientCreateComponent {
         this.showNotification('Client created successfully!', 'success');
         setTimeout(() => {
           this.router.navigate(['/client-list']);
-        }, 2000); // Redirection after 2 seconds
+        }, 2000); // Redirection après 2 secondes
       },
       error => {
         console.error('There was an error!', error);
@@ -67,7 +67,7 @@ export class ClientCreateComponent {
       duration: 2000,
       horizontalPosition: 'right',
       verticalPosition: 'top',
-      panelClass: type === 'success' ? 'success-snackbar' : 'error-snackbar'
+      panelClass: type === 'success' ? ['success-snackbar'] : ['error-snackbar']
     });
   }
 }
