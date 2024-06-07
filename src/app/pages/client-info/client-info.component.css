@@ -1,12 +1,23 @@
+.container {
+  min-height: 75vh;
+  margin: 50px auto;
+  padding: 20px;
+  max-width: 900px;
+}
+
+h1 {
+  text-align: center;
+  color: #413993;
+  padding-bottom: 75px;
+}
+
 .client-create-container {
-    max-width: 900px;
     align-items: center;
-    margin: 10% auto;
+    margin: 2% auto;
     margin-top: 50px 0 0 0;
-    padding: 40px;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 20px;
+    padding: 50px;
+    border: 1.5px solid #edf0f6;
+    border-radius: 30px;
     text-align: center;
 }
 
@@ -62,9 +73,8 @@
     cursor: pointer;
 }
 .back-to-list:hover {
-    color: #7e6ec7; 
+    color: #7e6ec7;
 }
-
 
 .back-to-list i {
     margin-right: 5px;
