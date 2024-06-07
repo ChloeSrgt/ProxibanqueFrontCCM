@@ -11,6 +11,7 @@ export class BankTransferModalComponent {
   fromAccount: string;
   toAccount: string;
   amount: number = 0;
+  errorMessage: string | null = null;
 
   constructor(
     public dialogRef: MatDialogRef<BankTransferModalComponent>,
@@ -32,6 +33,13 @@ export class BankTransferModalComponent {
   }
 
   submitTransfer(): void {
+    this.errorMessage = null;
+
+    if (this.amount <= 0) {
+      this.errorMessage = 'Transfer amount must be positive';
+      return;
+    }
+
     const fromAccountId = this.data.fromAccountId;
     const toAccountId = this.data.toAccountId;
 
@@ -40,8 +48,8 @@ export class BankTransferModalComponent {
         this.dialogRef.close({ success: true });
       },
       error => {
+        this.errorMessage = error.error.message || 'An error occurred';
         console.error('Transfer failed', error);
-        this.dialogRef.close({ success: false });
       }
     );
   }
