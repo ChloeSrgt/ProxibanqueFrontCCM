@@ -1,68 +1,78 @@
-.statistics-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 100px;
-    gap: 20px;
-  }
-  
-  .chart-container, .overdrawn-clients-container {
-    border: 1px solid #ccc;
-    border-radius: 15px;
-    padding: 40px;
-    background-color: #fff;
-    max-width: 600px;
-    width: 100%; 
-  }
+.container {
+  min-height: 75vh;
+  margin: 50px auto;
+  padding: 20px;
+}
 
-  .overdrawn-clients-container {
-    border: 1px solid #ccc;
-    border-radius: 15px;
-    padding: 20px;
-    background-color: #fff;
-    max-width: 400px; 
-    width: 100%;
-  }
-  
-  
-  .chart-container {
-    margin-right: 20px;
-  }
-  
-  .clients-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  .clients-list li {
-    display: flex;
-    justify-content: space-between;
-    padding: 5px 0;
-    border-bottom: 1px solid #eee;
-  }
-  
-  .clients-list li:last-child {
-    border-bottom: none; 
-  }
-  
-  .client-info {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .client-name {
-    color: #413993;
-    font-weight: bold;
-    text-decoration: underline;
-  }
-  
-  .client-account {
-    color: #aaa;
-  }
-  
-  .overdrawn-amount {
-    color: red;
-    /* font-weight: bold; */
-  }
-  
+h1 {
+  padding-bottom: 75px;
+  color: #413993;
+  text-align: center;
+}
+
+.statistics-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 100px;
+  gap: 20px;
+}
+
+.chart-container, .overdrawn-clients-container {
+  border: 1.5px solid #edf0f6;
+  border-radius: 15px;
+  padding: 40px;
+  background-color: #fff;
+  max-width: 600px;
+  width: 100%;
+}
+
+.overdrawn-clients-container {
+  border: 1.5px solid #edf0f6;
+  border-radius: 15px;
+  padding: 20px;
+  background-color: #fff;
+  max-width: 400px;
+  width: 100%;
+}
+
+.chart-container {
+  margin-right: 20px;
+}
+
+.clients-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.clients-list li {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.clients-list li:last-child {
+  border-bottom: none;
+}
+
+.client-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.client-name {
+  color: #413993;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.client-account {
+  color: #aaa;
+}
+
+.overdrawn-amount {
+  color: red;
+  /* font-weight: bold; */
+}
