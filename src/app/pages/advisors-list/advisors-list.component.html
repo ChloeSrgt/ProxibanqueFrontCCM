@@ -14,7 +14,8 @@
 
     <div class="info-section">
       <h2>Advisor info</h2>
-      <div *ngIf="selectedAdvisor">
+
+      <div *ngIf="selectedAdvisor; else noAdvisorSelected">
 
         <div class="d-flex justify-content-between">
           <h3>First name</h3>
@@ -32,6 +33,10 @@
         </div>
 
       </div>
+
+      <ng-template #noAdvisorSelected>
+        <p>Please select an advisor.</p>
+      </ng-template>
 
         <div *ngIf="selectedAdvisor">
           <h3 class="info-clients">Clients</h3>
