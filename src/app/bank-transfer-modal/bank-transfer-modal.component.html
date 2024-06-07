@@ -1,29 +1,30 @@
 <div class="transfer-modal">
-    <div class="modal-header">
-      <button class="close-button" (click)="onNoClick()"><i class="fa-solid fa-xmark fa-xs" style="color: #ffffff;"></i></button>
+  <div class="modal-header">
+    <button class="close-button" (click)="onNoClick()"><i class="fa-solid fa-xmark fa-xs" style="color: #ffffff;"></i></button>
+  </div>
+  <h2>Bank transfer</h2>
+  <div *ngIf="errorMessage" class="alert alert-danger">{{ errorMessage }}</div>
+  <div class="transfer-accounts">
+    <div class="account from">
+      <p class="account-label">From:</p>
+      <p>{{ fromAccount }}</p>
     </div>
-    <h2>Bank transfer</h2>
-    <div class="transfer-accounts">
-      <div class="account from">
-        <p class="account-label">From:</p>
-        <p>{{ fromAccount }}</p>
-      </div>
-      <div class="transfer-direction" (click)="toggleDirection()">
-        ⬌
-      </div>
-      <div class="account to">
-        <p class="account-label">To:</p>
-        <p>{{ toAccount }}</p>
-      </div>
+    <div class="transfer-direction" (click)="toggleDirection()">
+      ⬌
     </div>
-    <div class="amount-container">
-      <label for="amount">Amount</label>
-      <div class="amount-input">
-        <input matInput id="amount" [(ngModel)]="amount" type="number" placeholder="Amount">
-        <span>€</span>
-      </div>
-    </div>
-    <div class="modal-actions">
-      <button mat-button class="submit-button" (click)="submitTransfer()">Submit</button>
+    <div class="account to">
+      <p class="account-label">To:</p>
+      <p>{{ toAccount }}</p>
     </div>
   </div>
+  <div class="amount-container">
+    <label for="amount">Amount</label>
+    <div class="amount-input">
+      <input matInput id="amount" [(ngModel)]="amount" type="number" placeholder="Amount">
+      <span>€</span>
+    </div>
+  </div>
+  <div class="modal-actions">
+    <button mat-button class="submit-button" (click)="submitTransfer()">Submit</button>
+  </div>
+</div>
