@@ -14,9 +14,9 @@
         <div class="rightside-navbar">
           <ng-container *ngIf="role$ | async as role">
               <a *ngIf="role === 'manager'" [routerLink]="['/statistics']">Statistics</a>
-              <a *ngIf="role === 'manager'" [routerLink]="['/advisors-list']">Advisors List</a>
+              <a *ngIf="role === 'manager'" [routerLink]="['/advisors-list']">Advisors</a>
               <a *ngIf="role === 'advisor'" [routerLink]="['/client-create']">Add Client</a>
-              <a *ngIf="role === 'advisor'" [routerLink]="['/client-list']">Client List</a>
+              <a *ngIf="role === 'advisor'" [routerLink]="['/client-list']">Clients</a>
               <span>Nantes agency</span>
               <a *ngIf="role" (click)="logout()" style="cursor: pointer; margin-left: auto;">
                 <i class="fa-solid fa-right-to-bracket"></i>
