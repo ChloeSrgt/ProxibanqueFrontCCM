@@ -1,8 +1,9 @@
-<div class="client-create-container">
-    <a routerLink="/client-list" class="back-to-list"> <- Back to client list</a>
+<div class="container">
+  <a routerLink="/client-list" class="back-to-list"> <- Back to client list</a>
+  <div class="client-create-container">
     <form #createForm="ngForm" (ngSubmit)="onSubmit(createForm)">
         <div class="form-row">
-            <div class="form-group"> 
+            <div class="form-group">
                 <label for="firstName">First name:</label>
                 <input type="text" id="firstName" [(ngModel)]="client.firstName" name="firstName" placeholder="First Name" required>
             </div>
@@ -33,4 +34,6 @@
         </div>
         <button type="submit" class="btn btn-primary">Add client</button>
     </form>
+  </div>
+
 </div>

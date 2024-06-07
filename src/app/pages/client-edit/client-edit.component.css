@@ -1,19 +1,26 @@
-.client-create-container {
-    max-width: 900px;
-    align-items: center;
-    margin: 10% auto;
-    margin-top: 50px 0 0 0;
-    padding: 40px;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 20px;
-    text-align: center;
+.container {
+  min-height: 75vh;
+  margin: 50px auto;
+  padding: 20px;
+  max-width: 1000px;
 }
 
-.client-create-container h2 {
-    margin-bottom: 20px;
-    font-size: 34px;
-    color: #413993;
+h1 {
+  padding-bottom: 75px;
+  color: #413993;
+  text-align: center;
+}
+
+.client-create-container {
+    align-items: center;
+    margin: 2% auto;
+    /* margin-top: 50px 0 0 0; */
+    padding: 60px 40px;
+    /* background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+    border: 1.5px solid #edf0f6;
+    border-radius: 30px;
+    text-align: center;
 }
 
 .client-create-container .form-row {
@@ -53,7 +60,7 @@
     color: #fff;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    margin: 30px;
+    margin-top: 30px;
 }
 
 .client-create-container .btn:hover {
@@ -70,10 +77,10 @@
     font-weight: bold;
 }
 .back-to-list:hover {
-    color: #7e6ec7; 
+    color: #584FBA;
 }
 .client-create-container .btn:hover {
-    background-color: #7e6ec7; 
+    background-color: #584FBA;
 }
 
 .back-to-list i {
