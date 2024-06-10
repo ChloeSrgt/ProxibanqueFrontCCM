@@ -6,6 +6,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { MatSnackBar } from '@angular/material/snack-bar';  
 import { ConfirmDialogComponent } from '../../confirm-dialog/confirm-dialog.component';
 import { Address } from '../../model/address';
+import { catchError, of, tap } from 'rxjs';
 
 @Component({
   selector: 'app-client-list',
@@ -43,17 +44,18 @@ export class ClientListComponent implements OnInit {
   };
 
   editClient(id: number, client: Client) {
-    this.clientService.getClient(id).subscribe(
-      result => {
+    this.clientService.getClient(id).pipe(
+      tap(result => {
         setTimeout(()=> {
           this.goToEditClient(id);
         }, 2000);
-      },
-      error => {
+      }),
+      catchError(error => {
         console.error('There was an error!', error);
         this.showMessage('Error Editing client', 'error');
+        return of(null);
       }
-    )
+    )).subscribe();
   };
 
   clientInfo(id: number): void {
