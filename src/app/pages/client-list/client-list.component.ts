@@ -6,7 +6,8 @@ import { MatDialog } from '@angular/material/dialog';
 import { MatSnackBar } from '@angular/material/snack-bar';  
 import { ConfirmDialogComponent } from '../../confirm-dialog/confirm-dialog.component';
 import { Address } from '../../model/address';
-
+ 
+// client list page with list of clients and actions to edit, delete, show client
 @Component({
   selector: 'app-client-list',
   templateUrl: './client-list.component.html',

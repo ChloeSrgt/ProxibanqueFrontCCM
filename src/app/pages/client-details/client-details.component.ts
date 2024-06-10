@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ClientService } from '../../services/client.service';
 import { ActivatedRoute, Router } from '@angular/router';
 
+// client details page with client details
 @Component({
   selector: 'app-client-details',
   standalone: false,

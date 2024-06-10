@@ -2,6 +2,8 @@ import { Component, Inject } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { TransferService } from '../services/transfer.service';
 
+
+// modal component for bank transfer
 @Component({
   selector: 'app-bank-transfer-modal',
   templateUrl: './bank-transfer-modal.component.html',

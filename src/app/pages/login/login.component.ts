@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { AuthService } from '../../services/auth.service';
 import { Router } from '@angular/router';
 
+// login page with form to login and navigate to other pages
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',

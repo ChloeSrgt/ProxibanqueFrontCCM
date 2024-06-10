@@ -4,6 +4,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { Client } from '../../model/client';
 import { Address } from '../../model/address';
 
+// client info page with client info details  
 @Component({
   selector: 'app-client-info',
   templateUrl: './client-info.component.html',

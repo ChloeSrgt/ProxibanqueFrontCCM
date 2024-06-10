@@ -7,6 +7,7 @@ import { CurrentAccount } from '../../model/currentAccount';
 import { SavingAccount } from '../../model/savingAccount';
 import { NgForm } from '@angular/forms';
 
+// client create page with form to create client
 @Component({
   selector: 'app-client-create',
   templateUrl: './client-create.component.html',

@@ -5,6 +5,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { BankTransferModalComponent } from '../../bank-transfer-modal/bank-transfer-modal.component';
 import { TransferService } from '../../services/transfer.service';
 
+// client account page with info account and transfer modal and random card number
 @Component({
   selector: 'app-client-account',
   templateUrl: './client-account.component.html',

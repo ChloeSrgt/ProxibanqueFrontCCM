@@ -4,7 +4,7 @@ import { Client } from '../../model/client';
 import { Chart, registerables } from 'chart.js';
 
 Chart.register(...registerables);
-
+//  statistics page with advisor, client, overdrawn clients, transactions, chart
 @Component({
   selector: 'app-statistics',
   templateUrl: './statistics.component.html',
