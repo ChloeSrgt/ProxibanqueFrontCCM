@@ -44,20 +44,14 @@ export class ClientListComponent implements OnInit {
     this.router.navigate(['/accounts', id]);
   };
 
-  editClient(id: number, client: Client) {
-    this.clientService.getClient(id).pipe(
-      tap(result => {
-        setTimeout(()=> {
-          this.goToEditClient(id);
-        }, 2000);
-      }),
-      catchError(error => {
-        console.error('There was an error!', error);
-        this.showMessage('Error Editing client', 'error');
-        return of(null);
-      }
-    )).subscribe();
-  };
+
+  editClient(id:number, client:Client){
+    this.clientService.getClient(id).subscribe({
+      next:result=>this.goToEditClient(id),
+      error : error => this.showMessage('Error editing Client','error')
+    })
+    };
+    
 
   clientInfo(id: number): void {
     this.router.navigate(['/client-info', id]);
