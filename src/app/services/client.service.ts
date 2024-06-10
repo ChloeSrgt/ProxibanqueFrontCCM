@@ -4,6 +4,7 @@ import { Observable, throwError } from 'rxjs';
 import { catchError } from 'rxjs/operators';
 import { Client } from '../model/client';
 
+// Client service to handle client CRUD operations 
 @Injectable({
     providedIn: 'root'
 })

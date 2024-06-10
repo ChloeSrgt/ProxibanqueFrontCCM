@@ -1,14 +1,22 @@
 <div class="transfer-modal">
+  <!-- En-tête de la boîte de dialogue -->
   <div class="modal-header">
-    <button class="close-button" (click)="onNoClick()"><i class="fa-solid fa-xmark fa-xs" style="color: #ffffff;"></i></button>
+    <!-- Bouton pour fermer la boîte de dialogue -->
+    <button class="close-button" (click)="onNoClick()">
+      <i class="fa-solid fa-xmark fa-xs" style="color: #ffffff;"></i>
+    </button>
   </div>
+  <!-- Titre de la boîte de dialogue -->
   <h2>Bank transfer</h2>
+  <!-- Affiche le message d'erreur s'il y en a un -->
   <div *ngIf="errorMessage" class="alert alert-danger">{{ errorMessage }}</div>
+  <!-- Conteneur pour les informations des comptes de transfert -->
   <div class="transfer-accounts">
     <div class="account from">
       <p class="account-label">From:</p>
       <p>{{ fromAccount }}</p>
     </div>
+    <!-- Bouton pour inverser les comptes d'origine et de destination -->
     <div class="transfer-direction" (click)="toggleDirection()">
       ⬌
     </div>
@@ -17,13 +25,16 @@
       <p>{{ toAccount }}</p>
     </div>
   </div>
+  <!-- Conteneur pour saisir le montant du transfert -->
   <div class="amount-container">
     <label for="amount">Amount</label>
     <div class="amount-input">
+      <!-- Champ de saisie pour le montant du transfert -->
       <input matInput id="amount" [(ngModel)]="amount" type="number" placeholder="Amount">
       <span>€</span>
     </div>
   </div>
+  <!-- Bouton pour soumettre le transfert -->
   <div class="modal-actions">
     <button mat-button class="submit-button" (click)="submitTransfer()">Submit</button>
   </div>

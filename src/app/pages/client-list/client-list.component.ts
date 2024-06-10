@@ -8,6 +8,7 @@ import { ConfirmDialogComponent } from '../../confirm-dialog/confirm-dialog.comp
 import { Address } from '../../model/address';
 import { catchError, of, tap } from 'rxjs';
 
+// client list page with list of clients and actions to edit, delete, show client
 @Component({
   selector: 'app-client-list',
   templateUrl: './client-list.component.html',

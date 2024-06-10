@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 
+// Auth service to handle user authentication and roles management 
 @Injectable({
   providedIn: 'root'
 })

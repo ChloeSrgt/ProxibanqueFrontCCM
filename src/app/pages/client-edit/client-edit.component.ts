@@ -6,6 +6,7 @@ import { ConfirmDialogComponent } from '../../confirm-dialog/confirm-dialog.comp
 import { Client } from '../../model/client';
 import { Address } from '../../model/address';
 
+// client edit page with form to edit client, pop up dialog for confirmation edit client
 @Component({
   selector: 'app-client-edit',
   templateUrl: './client-edit.component.html',
